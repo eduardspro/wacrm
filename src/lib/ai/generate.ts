@@ -2,6 +2,7 @@ import { AiError, type AiConfig, type ChatMessage, type GenerateResult } from '.
 import { HANDOFF_SENTINEL, aiRequestTimeoutMs } from './defaults'
 import { generateOpenAi } from './providers/openai'
 import { generateAnthropic } from './providers/anthropic'
+import { generateDeepSeek } from './providers/deepseek'
 
 export interface GenerateArgs {
   config: AiConfig
@@ -34,6 +35,9 @@ export async function generateReply(args: GenerateArgs): Promise<GenerateResult>
       break
     case 'anthropic':
       raw = await generateAnthropic(providerArgs)
+      break
+    case 'deepseek':
+      raw = await generateDeepSeek(providerArgs)
       break
     default:
       throw new AiError(`Unsupported AI provider: ${config.provider}`, {
