@@ -65,7 +65,7 @@ export function ConversationsChart({ series, loading, range, onRangeChange }: Co
                   : 'text-muted-foreground hover:text-foreground',
               )}
             >
-              {r} days
+              {r} días
             </button>
           ))}
         </div>
@@ -77,8 +77,8 @@ export function ConversationsChart({ series, loading, range, onRangeChange }: Co
         ) : data.every((p) => p.incoming === 0 && p.outgoing === 0) ? (
           <EmptyState
             icon={MessageSquare}
-            title="No message activity in this range"
-            hint="Send or receive messages to start populating this chart."
+            title="Sin actividad de mensajes en este rango"
+            hint="Envía o recibe mensajes para empezar a ver esta gráfica."
           />
         ) : (
           <LineSvg data={data} maxY={maxY} ticks={niceTicks} />
@@ -195,7 +195,7 @@ function LineSvg({
         viewBox={`0 0 ${VB_W} ${VB_H}`}
         className="h-[240px] w-full"
         role="img"
-        aria-label="Conversations per day"
+        aria-label="Conversaciones por día"
       >
         {/* Y-axis gridlines + labels */}
         {ticks.map((t) => {
@@ -287,11 +287,11 @@ function LineSvg({
           <div className="mt-1 flex flex-col gap-0.5">
             <span className="flex items-center gap-1.5 text-blue-300">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-500" />
-              {hovered.incoming} incoming
+              {hovered.incoming} entrantes
             </span>
             <span className="flex items-center gap-1.5 text-primary">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-              {hovered.outgoing} outgoing
+              {hovered.outgoing} salientes
             </span>
           </div>
         </div>
