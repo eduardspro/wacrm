@@ -14,6 +14,7 @@ import {
   GitBranch,
   LayoutDashboard,
   LogOut,
+  MessageSquare,
   Radio,
   Settings,
   Shield,
