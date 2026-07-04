@@ -305,7 +305,7 @@ export function ProfileForm() {
             </p>
             <dl className="grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
               <div>
-                <dt className="text-muted-foreground">Role</dt>
+                <dt className="text-muted-foreground">Rol</dt>
                 <dd className="mt-0.5 font-mono text-foreground">
                   {profile?.role ?? 'user'}
                 </dd>

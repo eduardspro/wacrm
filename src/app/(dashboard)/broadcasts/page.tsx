@@ -219,8 +219,7 @@ export default function BroadcastsPage() {
               <TableRow className="border-border hover:bg-transparent">
                 <TableHead className="text-muted-foreground">Nombre</TableHead>
                 <TableHead className="hidden text-muted-foreground md:table-cell">Template</TableHead>
-                <TableHead className="hidden text-right text-muted-foreground sm:table-cell">
-                  Recipients
+                <TableHead className="hidden text-right text-muted-foreground sm:table-cell">Destinatarios
                 </TableHead>
                 <TableHead className="hidden text-muted-foreground lg:table-cell">Delivery</TableHead>
                 <TableHead className="hidden text-muted-foreground lg:table-cell">Leído</TableHead>

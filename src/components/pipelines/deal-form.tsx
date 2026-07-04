@@ -295,7 +295,7 @@ export function DealForm({
 
             <div className="grid grid-cols-[1fr_110px] gap-3">
               <div className="grid gap-2">
-                <Label className="text-muted-foreground">Value</Label>
+                <Label className="text-muted-foreground">Valor</Label>
                 <div className="relative">
                   <DollarSign className="absolute left-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
                   <Input
@@ -438,7 +438,7 @@ export function DealForm({
                 disabled={saving || !title.trim() || !contactId || !stageId}
                 className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
               >
-                {saving ? "Saving..." : deal ? "Save Changes" : "Create Deal"}
+                {saving ? "Guardando..." : deal ? "Guardar cambios" : "Crear negocio"}
               </Button>
             </div>
 

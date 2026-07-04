@@ -508,8 +508,7 @@ export function ImportModal({
                   <table className="w-full min-w-[32rem] text-xs">
                     <thead>
                       <tr className="border-b border-border bg-background/60">
-                        <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">
-                          Phone
+                        <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">Teléfono
                         </th>
                         <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">Nombre
                         </th>

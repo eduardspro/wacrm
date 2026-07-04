@@ -100,8 +100,7 @@ export function EditorHeader() {
             size="sm"
             onClick={() => router.push(`/flows/${flow.id}/runs`)}
           >
-            <History className="h-3.5 w-3.5" />
-            Runs
+            <History className="h-3.5 w-3.5" />Ejecuciones
             <span className="ml-0.5 rounded bg-muted px-1.5 py-0.5 font-mono text-[11px] text-muted-foreground">
               {flow.execution_count}
             </span>

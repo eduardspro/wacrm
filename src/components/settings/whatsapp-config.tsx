@@ -708,8 +708,7 @@ export function WhatsAppConfig() {
           >
             {saving ? (
               <>
-                <Loader2 className="size-4 animate-spin" />
-                Saving...
+                <Loader2 className="size-4 animate-spin" />Guardando...
               </>
             ) : (
               'Save Configuration'

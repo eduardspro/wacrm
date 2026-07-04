@@ -142,7 +142,7 @@ export function defaultConfigFor(type: NodeType): Record<string, unknown> {
     case "send_buttons":
       return {
         text: "",
-        buttons: [{ reply_id: "yes", title: "Yes", next_node_key: "" }],
+        buttons: [{ reply_id: "yes", title: "Sí", next_node_key: "" }],
       };
     case "send_list":
       return {
@@ -349,7 +349,7 @@ export function FlowEditorProvider({
       setDirty(false);
       toast.success("Saved.");
     } catch (err) {
-      const msg = err instanceof Error ? err.message : "Save failed";
+      const msg = err instanceof Error ? err.message : "Error al guardar";
       toast.error(msg);
     } finally {
       setSaving(false);
@@ -411,7 +411,7 @@ export function FlowEditorProvider({
       if (!res.ok) throw new Error(`Delete failed: ${res.status}`);
       router.push("/flows");
     } catch (err) {
-      const msg = err instanceof Error ? err.message : "Delete failed";
+      const msg = err instanceof Error ? err.message : "Error al eliminar";
       toast.error(msg);
     }
   }, [initialFlow.id, router, state.name]);

@@ -241,7 +241,7 @@ export default function NotificationsPage() {
                       </span>
                       {isUnread && (
                         <span
-                          aria-label="Unread"
+                          aria-label="No leídos"
                           className="h-2 w-2 flex-shrink-0 rounded-full bg-primary"
                         />
                       )}

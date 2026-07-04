@@ -469,7 +469,7 @@ export default function BroadcastDetailPage() {
               <TableHeader>
                 <TableRow className="border-border hover:bg-transparent">
                   <TableHead className="text-muted-foreground">Contact</TableHead>
-                  <TableHead className="text-muted-foreground">Phone</TableHead>
+                  <TableHead className="text-muted-foreground">Teléfono</TableHead>
                   <TableHead className="text-muted-foreground">Estado</TableHead>
                   <TableHead className="text-muted-foreground">Enviado</TableHead>
                   <TableHead className="text-muted-foreground">Entregado</TableHead>

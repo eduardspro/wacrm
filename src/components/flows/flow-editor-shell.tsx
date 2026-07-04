@@ -110,7 +110,7 @@ export function FlowEditorShell({ initialFlow, initialNodes }: Props) {
                 active={effectiveView === "canvas"}
                 onClick={() => choose("canvas")}
                 icon={<GitFork className="h-3.5 w-3.5" />}
-                label="Canvas"
+                label="Lienzo"
               />
               <SegButton
                 active={effectiveView === "list"}

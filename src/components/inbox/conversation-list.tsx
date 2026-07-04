@@ -45,7 +45,7 @@ type InboxFilter = ConversationStatus | "all" | "unread";
 
 const FILTER_OPTIONS: { label: string; value: InboxFilter }[] = [
   { label: "All", value: "all" },
-  { label: "Unread", value: "unread" },
+  { label: "No leídos", value: "unread" },
   { label: "Abierto", value: "open" },
   { label: "Pendiente", value: "pending" },
   { label: "Closed", value: "closed" },
@@ -226,7 +226,7 @@ export function ConversationList({
           <Input
             value={search}
             onChange={handleSearchChange}
-            placeholder="Search conversations..."
+            placeholder="Buscar conversaciones..."
             className="border-border bg-muted pl-9 text-sm text-foreground placeholder-muted-foreground focus:border-primary/50"
           />
         </div>

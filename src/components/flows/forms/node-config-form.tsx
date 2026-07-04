@@ -710,7 +710,7 @@ function ConditionForm({
         </div>
         {showValue && (
           <div>
-            <label className="mb-1 block text-xs text-muted-foreground">Value</label>
+            <label className="mb-1 block text-xs text-muted-foreground">Valor</label>
             <Input
               value={cfg.value ?? ""}
               onChange={(e) => onUpdateConfig({ value: e.target.value })}
@@ -767,7 +767,7 @@ function SetTagForm({
     <>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         <div>
-          <label className="mb-1 block text-xs text-muted-foreground">Action</label>
+          <label className="mb-1 block text-xs text-muted-foreground">Acción</label>
           <Select
             value={cfg.mode ?? "add"}
             onValueChange={(v) =>
@@ -778,7 +778,7 @@ function SetTagForm({
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="add">Add tag</SelectItem>
+              <SelectItem value="add">Agregar etiqueta</SelectItem>
               <SelectItem value="remove">Remove tag</SelectItem>
             </SelectContent>
           </Select>

@@ -115,8 +115,7 @@ export function DealsSettings() {
             >
               {saving ? (
                 <>
-                  <Loader2 className="size-4 animate-spin" />
-                  Saving...
+                  <Loader2 className="size-4 animate-spin" />Guardando...
                 </>
               ) : (
                 "Guardar"

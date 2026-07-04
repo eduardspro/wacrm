@@ -286,8 +286,7 @@ export function MembersTab() {
         action={
           <RequireRole min="admin">
             <Button onClick={() => setInviteOpen(true)}>
-              <Plus className="size-4" />
-              Invite member
+              <Plus className="size-4" />Invitar miembro
             </Button>
           </RequireRole>
         }
@@ -504,7 +503,7 @@ export function MembersTab() {
                   No pending invitations.
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Click <span className="text-muted-foreground">Invite member</span>{' '}
+                  Click <span className="text-muted-foreground">Invitar miembro</span>{' '}
                   above to generate a shareable link.
                 </p>
               </CardContent>

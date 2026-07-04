@@ -184,7 +184,7 @@ export function ContactSidebar({ contact }: ContactSidebarProps) {
             </div>
             <div className="mt-2 flex flex-wrap gap-1">
               {tags.length === 0 ? (
-                <p className="px-1 text-xs text-muted-foreground">No tags</p>
+                <p className="px-1 text-xs text-muted-foreground">Sin etiquetas</p>
               ) : (
                 tags.map((tag) => (
                   <span

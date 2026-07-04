@@ -325,7 +325,7 @@ function AutomationCard({
           <Switch
             checked={automation.is_active}
             onCheckedChange={(v) => onToggle(!!v)}
-            aria-label={automation.is_active ? "Deactivate" : "Activate"}
+            aria-label={automation.is_active ? "Desactivar" : "Activar"}
           />
 
           <DropdownMenu>

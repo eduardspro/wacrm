@@ -30,8 +30,7 @@ export function AppearancePanel() {
 
       <div className="space-y-4">
         <h3 className="flex items-center gap-2 text-sm font-semibold text-foreground">
-          <SunMoon className="size-4 text-muted-foreground" />
-          Mode
+          <SunMoon className="size-4 text-muted-foreground" />Modo
         </h3>
 
         <div

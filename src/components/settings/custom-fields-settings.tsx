@@ -23,8 +23,7 @@ export function CustomFieldsSettings() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-foreground">
-          <SlidersHorizontal className="size-4 text-primary" />
-          Custom fields
+          <SlidersHorizontal className="size-4 text-primary" />Campos personalizados
           <SettingsChip variant="admin" className="font-medium">
             <Shield />Administrador
           </SettingsChip>

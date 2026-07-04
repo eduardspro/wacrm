@@ -249,8 +249,7 @@ export function ContactForm({
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="cf-phone" className="text-muted-foreground">
-              Phone <span className="text-red-400">*</span>
+            <Label htmlFor="cf-phone" className="text-muted-foreground">Teléfono <span className="text-red-400">*</span>
             </Label>
             <Input
               id="cf-phone"

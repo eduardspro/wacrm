@@ -480,8 +480,7 @@ export function ContactDetailView({
                 <TabsTrigger
                   value="deals"
                   className="data-active:bg-muted data-active:text-primary text-muted-foreground"
-                >
-                  Deals
+                >Negocios
                 </TabsTrigger>
               </TabsList>
 
@@ -497,8 +496,7 @@ export function ContactDetailView({
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <Label className="text-muted-foreground text-xs">
-                      Phone <span className="text-red-400">*</span>
+                    <Label className="text-muted-foreground text-xs">Teléfono <span className="text-red-400">*</span>
                     </Label>
                     <Input
                       value={editPhone}

@@ -206,7 +206,7 @@ export function InviteMemberDialog({
             </DialogHeader>
 
             <div className="space-y-3 py-2">
-              <Label className="text-muted-foreground">Invite link</Label>
+              <Label className="text-muted-foreground">Enlace de invitación</Label>
               <div className="flex gap-2">
                 <Input
                   readOnly
@@ -277,7 +277,7 @@ export function InviteMemberDialog({
 
             <div className="space-y-4 py-2">
               <div className="space-y-2">
-                <Label className="text-muted-foreground">Role</Label>
+                <Label className="text-muted-foreground">Rol</Label>
                 <Select
                   value={role}
                   onValueChange={(v) => v && setRole(v as InviteRole)}

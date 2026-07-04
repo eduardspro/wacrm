@@ -267,7 +267,7 @@ function TriggerPanel({
 }) {
   return (
     <section className="border-border bg-card rounded-lg border p-4">
-      <h2 className="text-foreground mb-3 text-sm font-semibold">Trigger</h2>
+      <h2 className="text-foreground mb-3 text-sm font-semibold">Desencadenador</h2>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         <div>
           <label className="text-muted-foreground mb-1 block text-xs">

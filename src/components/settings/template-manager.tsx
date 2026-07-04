@@ -977,8 +977,7 @@ export function TemplateManager() {
                             <SelectItem
                               value="PHONE_NUMBER"
                               className="text-popover-foreground focus:bg-muted focus:text-popover-foreground"
-                            >
-                              Phone
+                            >Teléfono
                             </SelectItem>
                             <SelectItem
                               value="COPY_CODE"

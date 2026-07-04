@@ -94,8 +94,8 @@ const STEP_META: Record<AutomationStepType, StepMeta> = {
   remove_tag: { label: "Remove Tag", icon: TagIcon, border: "border-l-primary" },
   assign_conversation: { label: "Assign Conversation", icon: UserCheck, border: "border-l-primary" },
   update_contact_field: { label: "Update Contact Field", icon: PencilLine, border: "border-l-primary" },
-  create_deal: { label: "Create Deal", icon: Briefcase, border: "border-l-primary" },
-  wait: { label: "Wait", icon: Hourglass, border: "border-l-border" },
+  create_deal: { label: "Crear negocio", icon: Briefcase, border: "border-l-primary" },
+  wait: { label: "Esperar", icon: Hourglass, border: "border-l-border" },
   condition: { label: "Condition (If/Else)", icon: GitBranch, border: "border-l-amber-500" },
   send_webhook: { label: "Send Webhook", icon: Webhook, border: "border-l-primary" },
   close_conversation: { label: "Close Conversation", icon: CircleSlash, border: "border-l-primary" },
@@ -355,7 +355,7 @@ function ContactFieldSelect({
       <option value="email">Correo electrónico</option>
       <option value="company">Company</option>
       {customFields.length > 0 && (
-        <optgroup label="Custom fields">
+        <optgroup label="Campos personalizados">
           {customFields.map((f) => (
             <option key={f.id} value={`custom:${f.id}`}>
               {f.field_name}
@@ -658,7 +658,7 @@ export function AutomationBuilder({ initial }: { initial: BuilderInitial }) {
             description: firstIssue.path ? `at ${firstIssue.path}` : undefined,
           })
         } else {
-          toast.error(body?.error ?? "Save failed")
+          toast.error(body?.error ?? "Error al guardar")
         }
         return
       }
@@ -767,7 +767,7 @@ function TriggerCard({
             <Zap className="h-4 w-4" />
           </div>
           <div className="min-w-0 flex-1">
-            <div className="text-[11px] uppercase tracking-wide text-blue-300">Trigger</div>
+            <div className="text-[11px] uppercase tracking-wide text-blue-300">Desencadenador</div>
             <div className="truncate text-sm font-medium text-foreground">
               {TRIGGER_OPTIONS.find((o) => o.value === type)?.label ?? type}
             </div>
@@ -1009,7 +1009,7 @@ function StepRenderer({
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[11px] uppercase tracking-wide text-muted-foreground">
-                {isCondition ? "Condition" : step.step_type === "wait" ? "Wait" : "Action"}
+                {isCondition ? "Condición" : step.step_type === "wait" ? "Esperar" : "Acción"}
               </div>
               <div className="truncate text-sm font-medium text-foreground">{meta.label}</div>
               <div className="truncate text-[11px] text-muted-foreground">{previewFor(step)}</div>
@@ -1100,7 +1100,7 @@ function ConditionBranches({
     // cram each branch to ~170px which is too narrow for the nested
     // cards. Two-column grid returns on sm+.
     <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
-      <BranchColumn label="Yes" color="text-primary">
+      <BranchColumn label="Sí" color="text-primary">
         <StepList {...props} steps={yes} parentPath={yesPath} />
       </BranchColumn>
       <BranchColumn label="No" color="text-rose-400">
@@ -1134,7 +1134,7 @@ function AddButton({ onPick }: { onPick: (t: AutomationStepType) => void }) {
       <DropdownMenu>
         <DropdownMenuTrigger
           className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-dashed border-border bg-background text-muted-foreground transition-colors hover:border-primary hover:bg-primary/10 hover:text-primary data-[popup-open]:border-primary data-[popup-open]:bg-primary/20 data-[popup-open]:text-primary"
-          aria-label="Add step"
+          aria-label="Agregar paso"
         >
           <Plus className="h-4 w-4" />
         </DropdownMenuTrigger>
@@ -1206,7 +1206,7 @@ function StepEditor({
     case "assign_conversation":
       return (
         <>
-          <FieldBlock label="Mode">
+          <FieldBlock label="Modo">
             <select
               value={(cfg.mode as string) ?? "round_robin"}
               onChange={(e) => set({ mode: e.target.value })}
@@ -1235,7 +1235,7 @@ function StepEditor({
               onChange={(v) => set({ field: v })}
             />
           </FieldBlock>
-          <FieldBlock label="Value">
+          <FieldBlock label="Valor">
             <Input
               value={(cfg.value as string) ?? ""}
               onChange={(e) => set({ value: e.target.value })}
@@ -1260,7 +1260,7 @@ function StepEditor({
               className="bg-muted text-foreground"
             />
           </FieldBlock>
-          <FieldBlock label="Value">
+          <FieldBlock label="Valor">
             <Input
               type="number"
               value={(cfg.value as number) ?? 0}
@@ -1290,7 +1290,7 @@ function StepEditor({
             >
               <option value="minutes">Minutes</option>
               <option value="hours">Hours</option>
-              <option value="days">Days</option>
+              <option value="días">Days</option>
             </select>
           </FieldBlock>
         </div>
@@ -1327,7 +1327,7 @@ function StepEditor({
             />
           </FieldBlock>
           {(cfg.subject === "contact_field" || cfg.subject === "message_content") && (
-            <FieldBlock label="Value">
+            <FieldBlock label="Valor">
               <Input
                 value={(cfg.value as string) ?? ""}
                 onChange={(e) => set({ value: e.target.value })}

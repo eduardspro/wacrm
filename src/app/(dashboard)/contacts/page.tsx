@@ -354,8 +354,7 @@ export default function ContactsPage() {
               onClick={() => setCustomFieldsOpen(true)}
               className="border-border text-muted-foreground hover:bg-muted"
             >
-              <SlidersHorizontal className="size-4" />
-              Custom fields
+              <SlidersHorizontal className="size-4" />Campos personalizados
             </Button>
           )}
           <GatedButton
@@ -392,7 +391,7 @@ export default function ContactsPage() {
                 // set shrinks/grows, page N may no longer be valid.
                 setPage(0);
               }}
-              placeholder="Search by name, phone, or email..."
+              placeholder="Buscar por nombre, teléfono o correo..."
               className="pl-8 bg-card border-border text-foreground placeholder:text-muted-foreground"
             />
           </div>
@@ -540,7 +539,7 @@ export default function ContactsPage() {
                 />
               </TableHead>
               <TableHead className="text-muted-foreground">Nombre</TableHead>
-              <TableHead className="text-muted-foreground">Phone</TableHead>
+              <TableHead className="text-muted-foreground">Teléfono</TableHead>
               <TableHead className="text-muted-foreground hidden md:table-cell">Correo electrónico</TableHead>
               <TableHead className="text-muted-foreground hidden lg:table-cell">Company</TableHead>
               <TableHead className="text-muted-foreground hidden md:table-cell">Etiquetas</TableHead>
