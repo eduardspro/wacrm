@@ -135,16 +135,16 @@ export default function DashboardPage() {
         ) : (
           <>
             <MetricCard
-              title="Active Conversations"
+              title="Conversaciones activas"
               value={metrics.activeConversations.current.toLocaleString()}
               icon={MessageSquare}
               delta={{
                 sign: metrics.activeConversations.previous,
-                label: deltaLabel(metrics.activeConversations.previous, 'new today vs yesterday'),
+                label: deltaLabel(metrics.activeConversations.previous, 'nuevas hoy vs ayer'),
               }}
             />
             <MetricCard
-              title="New Contacts Today"
+              title="Nuevos contactos hoy"
               value={metrics.newContactsToday.current.toLocaleString()}
               icon={UserPlus}
               delta={{
@@ -152,18 +152,18 @@ export default function DashboardPage() {
                   metrics.newContactsToday.current - metrics.newContactsToday.previous,
                 label: deltaLabel(
                   metrics.newContactsToday.current - metrics.newContactsToday.previous,
-                  'vs yesterday',
+                  'vs ayer',
                 ),
               }}
             />
             <MetricCard
-              title="Open Deals Value"
+              title="Valor negocios abiertos"
               value={formatCurrency(metrics.openDealsValue, defaultCurrency)}
               icon={DollarSign}
-              subtitle={`${metrics.openDealsCount} open deal${metrics.openDealsCount === 1 ? '' : 's'}`}
+              subtitle={`${metrics.openDealsCount} negocio${metrics.openDealsCount === 1 ? '' : 's'} abierto${metrics.openDealsCount === 1 ? '' : 's'}`}
             />
             <MetricCard
-              title="Messages Sent Today"
+              title="Mensajes enviados hoy"
               value={metrics.messagesSentToday.current.toLocaleString()}
               icon={Send}
               delta={{
