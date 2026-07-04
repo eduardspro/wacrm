@@ -868,7 +868,7 @@ export function MessageThread({
                 contactPanelOpen ? "Hide contact panel" : "Show contact panel"
               }
               aria-pressed={contactPanelOpen}
-              title={contactPanelOpen ? "Hide contact" : "Show contact"}
+              title={contactPanelOpen ? "Ocultar contacto" : "Mostrar contacto"}
               className={cn(
                 "hidden h-7 w-7 items-center justify-center rounded-md transition-colors hover:bg-muted hover:text-foreground lg:inline-flex",
                 contactPanelOpen ? "text-primary" : "text-muted-foreground",

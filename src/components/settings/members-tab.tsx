@@ -281,7 +281,7 @@ export function MembersTab() {
   return (
     <section className="animate-in fade-in-50 space-y-6 duration-200">
       <SettingsPanelHead
-        title="Team members"
+        title="Miembros del equipo"
         description="People with access to this account. Roles control what each teammate can do."
         action={
           <RequireRole min="admin">

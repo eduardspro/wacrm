@@ -102,7 +102,7 @@ export default function AutomationsPage() {
       toast.error(body?.error ?? "Error al actualizar")
       return
     }
-    toast.success(next ? "Automation activated" : "Automation paused")
+    toast.success(next ? "Automatización activada" : "Automatización pausada")
   }
 
   async function duplicate(a: Automation) {
@@ -112,7 +112,7 @@ export default function AutomationsPage() {
       toast.error(body?.error ?? "Error al duplicar")
       return
     }
-    toast.success("Automation duplicated")
+    toast.success("Automatización duplicada")
     load()
   }
 
@@ -126,7 +126,7 @@ export default function AutomationsPage() {
       toast.error(body?.error ?? "Error al eliminar")
       return
     }
-    toast.success("Automation deleted")
+    toast.success("Automatización eliminada")
     setPendingDelete(null)
     load()
   }

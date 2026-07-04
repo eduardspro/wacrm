@@ -272,7 +272,7 @@ function FieldRow({
         size="icon-sm"
         disabled={busy}
         onClick={() => onDelete(field)}
-        title="Delete field"
+        title="Eliminar campo"
         className="shrink-0 text-muted-foreground hover:text-red-400"
       >
         {busy ? (

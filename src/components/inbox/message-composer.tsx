@@ -525,7 +525,7 @@ export function MessageComposer({
                   ? "Read-only — your role can't send messages"
                   : inputsDisabled
                     ? undefined
-                    : "Attach media"
+                    : "Adjuntar archivo"
               }
               className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md p-0 text-muted-foreground hover:text-foreground disabled:cursor-not-allowed disabled:opacity-50"
             >
@@ -560,7 +560,7 @@ export function MessageComposer({
             size="sm"
             canAct={!readOnly}
             gateReason="send messages"
-            title={readOnly ? undefined : "Send template"}
+            title={readOnly ? undefined : "Enviar plantilla"}
             className="h-9 w-9 shrink-0 p-0 text-muted-foreground hover:text-foreground"
             onClick={onOpenTemplates}
           >

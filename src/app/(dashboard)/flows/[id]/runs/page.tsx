@@ -72,12 +72,12 @@ const STATUS_META: Record<
     icon: CircleCheck,
   },
   handed_off: {
-    label: "Handed off",
+    label: "Transferido",
     classes: "border-amber-600/40 bg-amber-500/10 text-amber-300",
     icon: UserPlus,
   },
   timed_out: {
-    label: "Timed out",
+    label: "Tiempo agotado",
     classes: "border-border bg-muted/60 text-muted-foreground",
     icon: Clock,
   },
@@ -222,7 +222,7 @@ function RunCard({
   const meta = STATUS_META[run.status];
   const StatusIcon = meta.icon;
   const contactLabel =
-    run.contact?.name?.trim() || run.contact?.phone || "Unknown contact";
+    run.contact?.name?.trim() || run.contact?.phone || "Contacto desconocido";
   const duration = run.ended_at
     ? formatDistanceToNow(new Date(run.ended_at), {
         addSuffix: false,

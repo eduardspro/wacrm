@@ -430,5 +430,5 @@ function describeTrigger(flow: FlowRow): string {
   if (flow.trigger_type === "first_inbound_message") {
     return "Triggers on a contact's first-ever inbound message";
   }
-  return "Manual trigger";
+  return "Activación manual";
 }

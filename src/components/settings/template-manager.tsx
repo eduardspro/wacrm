@@ -482,7 +482,7 @@ export function TemplateManager() {
   return (
     <section className="animate-in fade-in-50 space-y-4 duration-200">
       <SettingsPanelHead
-        title="Message templates"
+        title="Plantillas de mensajes"
         description={
           'Create templates and submit them to Meta for approval. Use "Sync from Meta" to pull templates approved elsewhere.'
         }
@@ -577,7 +577,7 @@ export function TemplateManager() {
                         size="sm"
                         onClick={() => openEdit(template)}
                         title="Editing triggers Meta re-review — status flips to PENDING."
-                        aria-label="Edit template"
+                        aria-label="Editar plantilla"
                         className="text-muted-foreground hover:text-primary hover:bg-primary/10 h-8 px-2"
                       >
                         <Pencil className="size-3.5" />Editar

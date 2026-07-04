@@ -88,17 +88,17 @@ interface StepMeta {
 }
 
 const STEP_META: Record<AutomationStepType, StepMeta> = {
-  send_message: { label: "Send Message", icon: MessageSquare, border: "border-l-primary" },
-  send_template: { label: "Send Template", icon: FileText, border: "border-l-primary" },
-  add_tag: { label: "Add Tag", icon: Tag, border: "border-l-primary" },
-  remove_tag: { label: "Remove Tag", icon: TagIcon, border: "border-l-primary" },
-  assign_conversation: { label: "Assign Conversation", icon: UserCheck, border: "border-l-primary" },
+  send_message: { label: "Enviar Mensaje", icon: MessageSquare, border: "border-l-primary" },
+  send_template: { label: "Enviar Plantilla", icon: FileText, border: "border-l-primary" },
+  add_tag: { label: "Agregar Etiqueta", icon: Tag, border: "border-l-primary" },
+  remove_tag: { label: "Quitar Etiqueta", icon: TagIcon, border: "border-l-primary" },
+  assign_conversation: { label: "Asignar Conversación", icon: UserCheck, border: "border-l-primary" },
   update_contact_field: { label: "Update Contact Field", icon: PencilLine, border: "border-l-primary" },
   create_deal: { label: "Crear negocio", icon: Briefcase, border: "border-l-primary" },
   wait: { label: "Esperar", icon: Hourglass, border: "border-l-border" },
   condition: { label: "Condition (If/Else)", icon: GitBranch, border: "border-l-amber-500" },
-  send_webhook: { label: "Send Webhook", icon: Webhook, border: "border-l-primary" },
-  close_conversation: { label: "Close Conversation", icon: CircleSlash, border: "border-l-primary" },
+  send_webhook: { label: "Enviar Webhook", icon: Webhook, border: "border-l-primary" },
+  close_conversation: { label: "Cerrar Conversación", icon: CircleSlash, border: "border-l-primary" },
 }
 
 const ADDABLE_STEPS: AutomationStepType[] = [
@@ -122,10 +122,10 @@ const TRIGGER_OPTIONS: { value: AutomationTriggerType; label: string; hint: stri
     label: "First Message from Contact",
     hint: "First time this contact ever messages you (works for manually-added contacts too)",
   },
-  { value: "keyword_match", label: "Keyword Match", hint: "Message contains specific keyword(s)" },
+  { value: "keyword_match", label: "Coincidencia de Palabra", hint: "El mensaje contiene palabra(s) clave" },
   { value: "new_contact_created", label: "New Contact Created", hint: "When a contact is auto-created from an incoming message" },
-  { value: "conversation_assigned", label: "Conversation Assigned", hint: "When assigned to an agent" },
-  { value: "tag_added", label: "Tag Added", hint: "When a tag is added to a contact" },
+  { value: "conversation_assigned", label: "Conversación Asignada", hint: "Cuando se asigna a un agente" },
+  { value: "tag_added", label: "Etiqueta Agregada", hint: "Cuando se agrega una etiqueta a un contacto" },
   { value: "time_based", label: "Time-Based", hint: "On a recurring schedule" },
 ]
 
@@ -435,7 +435,7 @@ function DealPipelineFields({
             className="bg-muted text-foreground"
           />
         </FieldBlock>
-        <FieldBlock label="Stage id">
+        <FieldBlock label="ID de Etapa">
           <Input
             value={stageId}
             onChange={(e) =>
@@ -523,7 +523,7 @@ function SendTemplateFields({
   if (templates.length === 0) {
     return (
       <>
-        <FieldBlock label="Template name">
+        <FieldBlock label="Nombre de plantilla">
           <Input
             value={templateName}
             onChange={(e) =>
@@ -662,7 +662,7 @@ export function AutomationBuilder({ initial }: { initial: BuilderInitial }) {
         }
         return
       }
-      toast.success(isEditing ? "Automation saved" : "Automation created")
+      toast.success(isEditing ? "Automatización guardada" : "Automatización creada")
       if (!isEditing && body?.automation?.id) {
         router.replace(`/automations/${body.automation.id}/edit`)
       }
@@ -1175,7 +1175,7 @@ function StepEditor({
   switch (step.step_type) {
     case "send_message":
       return (
-        <FieldBlock label="Message text">
+        <FieldBlock label="Texto del mensaje">
           <Textarea
             value={(cfg.text as string) ?? ""}
             onChange={(e) => set({ text: e.target.value })}

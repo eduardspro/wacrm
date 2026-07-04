@@ -57,7 +57,7 @@ export function MessageActions({
       await navigator.clipboard.writeText(text);
       toast.success("Copied");
     } catch {
-      toast.error("Copy failed");
+      toast.error("Error al copiar");
     }
     setTouchOpen(false);
   };

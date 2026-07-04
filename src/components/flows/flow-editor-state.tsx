@@ -147,7 +147,7 @@ export function defaultConfigFor(type: NodeType): Record<string, unknown> {
     case "send_list":
       return {
         text: "",
-        button_label: "View options",
+        button_label: "Ver opciones",
         sections: [
           {
             title: "",
