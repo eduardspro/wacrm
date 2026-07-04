@@ -78,14 +78,14 @@ export function EditorHeader() {
           onChange={(e) => setState((s) => ({ ...s, name: e.target.value }))}
           placeholder="Nombre del flujo"
           spellCheck={false}
-          aria-label="Flow name"
+          aria-label="Nombre del flujo"
           className="min-w-[120px] max-w-[340px] rounded-lg border border-transparent bg-transparent px-2 py-1 text-lg font-bold leading-tight tracking-tight text-foreground outline-none transition-colors hover:bg-muted focus:border-primary focus:bg-transparent focus:shadow-[0_0_0_3px_var(--primary-soft)]"
         />
         <StatusChip status={state.status} />
         {dirty && (
           <span
             className="inline-flex shrink-0 items-center gap-1.5 text-[10px] font-medium uppercase tracking-wide text-amber-300"
-            title="Unsaved changes — hit Save to persist"
+            title="Cambios sin guardar — presiona Guardar para conservarlos"
             aria-live="polite"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
@@ -135,7 +135,7 @@ export function EditorHeader() {
               disabled={activating || !canActivate}
               title={
                 !canActivate
-                  ? "Fix the issues below before activating"
+                  ? "Corrige los problemas antes de activar"
                   : undefined
               }
             >
@@ -165,7 +165,7 @@ export function EditorHeader() {
           setState((s) => ({ ...s, description: e.target.value }))
         }
         placeholder="Agrega una descripción corta (interna — los clientes no la ven)"
-        aria-label="Flow description"
+        aria-label="Descripción del flujo"
         className="w-full max-w-[78ch] rounded-md border border-transparent bg-transparent px-2 py-1 text-[13px] text-muted-foreground outline-none transition-colors placeholder:text-muted-foreground/60 hover:bg-muted/50 focus:border-primary focus:bg-transparent focus:text-foreground"
       />
     </div>

@@ -116,11 +116,11 @@ const ADDABLE_STEPS: AutomationStepType[] = [
 ]
 
 const TRIGGER_OPTIONS: { value: AutomationTriggerType; label: string; hint: string }[] = [
-  { value: "new_message_received", label: "New Message Received", hint: "Any incoming message" },
+  { value: "new_message_received", label: "Nuevo Mensaje Recibido", hint: "Cualquier mensaje entrante" },
   {
     value: "first_inbound_message",
     label: "First Message from Contact",
-    hint: "First time this contact ever messages you (works for manually-added contacts too)",
+    hint: "Primera vez que este contacto te escribe (funciona también para contactos agregados manualmente)",
   },
   { value: "keyword_match", label: "Coincidencia de Palabra", hint: "El mensaje contiene palabra(s) clave" },
   { value: "new_contact_created", label: "New Contact Created", hint: "When a contact is auto-created from an incoming message" },
@@ -681,7 +681,7 @@ export function AutomationBuilder({ initial }: { initial: BuilderInitial }) {
           type="button"
           onClick={() => router.push("/automations")}
           className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-          aria-label="Back to automations"
+          aria-label="Volver a automatizaciones"
         >
           <ArrowLeft className="h-4 w-4" />
         </button>
@@ -815,7 +815,7 @@ function TriggerCard({
             )}
             {type === "time_based" && (
               <Input
-                placeholder="Cron expression or HH:mm"
+                placeholder="Expresión cron o HH:mm"
                 value={(config.schedule as string) ?? ""}
                 onChange={(e) =>
                   onConfigChange({ ...config, schedule: e.target.value })
@@ -1029,7 +1029,7 @@ function StepRenderer({
                     variant="ghost"
                     size="icon"
                     disabled={index === 0}
-                    aria-label="Move up"
+                    aria-label="Subir"
                     onClick={() => props.moveStepAt(path, -1)}
                   >
                     <ArrowUp className="h-4 w-4" />
@@ -1038,7 +1038,7 @@ function StepRenderer({
                     variant="ghost"
                     size="icon"
                     disabled={index === total - 1}
-                    aria-label="Move down"
+                    aria-label="Bajar"
                     onClick={() => props.moveStepAt(path, 1)}
                   >
                     <ArrowDown className="h-4 w-4" />
@@ -1346,7 +1346,7 @@ function StepEditor({
               className="bg-muted text-foreground"
             />
           </FieldBlock>
-          <FieldBlock label="Body template (JSON)">
+          <FieldBlock label="Plantilla del cuerpo (JSON)">
             <Textarea
               value={(cfg.body_template as string) ?? ""}
               onChange={(e) => set({ body_template: e.target.value })}

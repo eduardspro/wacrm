@@ -226,7 +226,7 @@ export function AiConfig() {
     <div>
       <SettingsPanelHead
         title="Configuración del agente"
-        description="Bring your own OpenAI or Anthropic key. wacrm calls the provider directly with your key — no per-seat AI fees, and your data stays yours. This powers AI-drafted replies in the inbox, the auto-reply bot, and the Playground."
+        description="Trae tu propia clave de OpenAI o Anthropic. wacrm llama al proveedor directamente con tu clave — sin costos de IA por usuario, y tus datos son tuyos. Esto impulsa las respuestas borrador de IA en la bandeja, el bot de auto-respuesta y el Playground."
       />
 
       {!canEdit && (

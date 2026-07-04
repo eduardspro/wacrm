@@ -488,7 +488,7 @@ function SendListForm({
                   size="sm"
                   onClick={() => removeSection(sIdx)}
                   className="shrink-0 text-red-400 hover:bg-red-500/10 hover:text-red-300"
-                  aria-label="Remove section"
+                  aria-label="Eliminar sección"
                 >
                   <Trash2 className="h-3.5 w-3.5" />
                 </Button>
@@ -816,7 +816,7 @@ function SetTagForm({
         allNodes={allNodes}
         currentKey={currentKey}
         onChange={(v) => onUpdateConfig({ next_node_key: v })}
-        label="Then advance to"
+        label="Luego avanzar a"
       />
     </>
   );
@@ -912,7 +912,7 @@ function SendMediaForm({
           media_url: publicUrl,
           filename: file.name,
         });
-        toast.success("File uploaded.");
+        toast.success("Archivo subido.");
       } catch (err) {
         const msg = err instanceof Error ? err.message : "Upload failed.";
         toast.error(msg);
@@ -975,7 +975,7 @@ function SendMediaForm({
               type="button"
               onClick={handleClear}
               className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground"
-              aria-label="Remove file"
+              aria-label="Eliminar archivo"
               disabled={uploading}
             >
               <X className="h-3.5 w-3.5" />
@@ -1041,7 +1041,7 @@ function SendMediaForm({
         allNodes={allNodes}
         currentKey={currentKey}
         onChange={(v) => onUpdateConfig({ next_node_key: v })}
-        label="After sending, advance to"
+        label="Después de enviar, avanzar a"
       />
     </>
   );

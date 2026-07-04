@@ -25,7 +25,7 @@ export function AppearancePanel() {
     <section className="max-w-3xl animate-in fade-in-50 duration-200">
       <SettingsPanelHead
         title="Apariencia"
-        description="Set the mode and accent colour used across the app. Saved to this device — try it, it changes live."
+        description="Configura el modo y color de acento en toda la app. Se guarda en este dispositivo — pruébalo, cambia en vivo."
       />
 
       <div className="space-y-4">

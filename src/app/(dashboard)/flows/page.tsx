@@ -184,7 +184,7 @@ export default function FlowsPage() {
       const res = await fetch(`/api/flows/${flow.id}`, { method: "DELETE" });
       if (!res.ok) throw new Error(`Delete failed: ${res.status}`);
       setFlows((prev) => prev.filter((f) => f.id !== flow.id));
-      toast.success("Flow deleted.");
+      toast.success("Flujo eliminado.");
     } catch (err) {
       console.error(err);
       toast.error("Couldn't delete flow.");
@@ -424,11 +424,11 @@ function describeTrigger(flow: FlowRow): string {
     const keywords = Array.isArray(flow.trigger_config.keywords)
       ? (flow.trigger_config.keywords as string[])
       : [];
-    if (keywords.length === 0) return "Triggers on keyword (none set)";
+    if (keywords.length === 0) return "Activa por palabra clave (ninguna definida)";
     return `Triggers on: ${keywords.join(", ")}`;
   }
   if (flow.trigger_type === "first_inbound_message") {
-    return "Triggers on a contact's first-ever inbound message";
+    return "Activa con el primer mensaje entrante de un contacto";
   }
   return "Activación manual";
 }

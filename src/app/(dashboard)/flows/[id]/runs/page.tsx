@@ -82,7 +82,7 @@ const STATUS_META: Record<
     icon: Clock,
   },
   paused_by_agent: {
-    label: "Paused by agent",
+    label: "Pausado por agente",
     classes: "border-border bg-muted text-muted-foreground",
     icon: PauseCircle,
   },

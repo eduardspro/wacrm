@@ -234,7 +234,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
                     <span className="flex-1">{item.label}</span>
                     {item.beta && (
                       <span
-                        aria-label="Beta feature"
+                        aria-label="Función beta"
                         className="rounded-full border border-amber-500/40 bg-amber-500/10 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-amber-300"
                       >Beta
                       </span>

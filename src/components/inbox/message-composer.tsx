@@ -509,7 +509,7 @@ export function MessageComposer({
             size="sm"
             onClick={stopRecording}
             className="h-9 w-9 shrink-0 bg-primary p-0 hover:bg-primary/90"
-            title="Stop and attach"
+            title="Detener y adjuntar"
           >
             <Square className="h-4 w-4" />
           </Button>
@@ -593,7 +593,7 @@ export function MessageComposer({
               readOnly
                 ? "Read-only — viewers can browse but not reply"
                 : sessionExpired
-                  ? "Session expired - use a template"
+                  ? "Sesión expirada - usa una plantilla"
                   : "Type a message... (Shift+Enter for new line)"
             }
             disabled={sessionExpired || readOnly}
@@ -682,7 +682,7 @@ function MediaDraftPreview({
         <button
           type="button"
           onClick={onDiscard}
-          aria-label="Remove attachment"
+          aria-label="Quitar adjunto"
           className="rounded p-1 text-muted-foreground hover:bg-muted hover:text-foreground"
         >
           <X className="h-4 w-4" />

@@ -383,10 +383,10 @@ export function FlowEditorProvider({
         setStateRaw((s) => ({ ...s, status: next }));
         toast.success(
           next === "active"
-            ? "Flow activated."
+            ? "Flujo activado."
             : next === "archived"
               ? "Archived."
-              : "Saved as draft.",
+              : "Guardado como borrador.",
         );
       } catch (err) {
         const msg = err instanceof Error ? err.message : "Status update failed";
