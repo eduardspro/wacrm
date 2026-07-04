@@ -37,10 +37,10 @@ import { GatedButton } from "@/components/ui/gated-button";
 
 // Spec-defined seed — name and color per the product spec.
 const SPEC_DEFAULT_STAGES = [
-  { name: "New Lead", color: "#3b82f6", position: 0 }, // blue
-  { name: "Qualified", color: "#eab308", position: 1 }, // yellow
-  { name: "Proposal Sent", color: "#f97316", position: 2 }, // orange
-  { name: "Negotiation", color: "#8b5cf6", position: 3 }, // purple
+  { name: "Nuevo Prospecto", color: "#3b82f6", position: 0 }, // blue
+  { name: "Calificado", color: "#eab308", position: 1 }, // yellow
+  { name: "Propuesta Enviada", color: "#f97316", position: 2 }, // orange
+  { name: "Negociación", color: "#8b5cf6", position: 3 }, // purple
   { name: "Ganado", color: "#22c55e", position: 4 }, // green
 ];
 
