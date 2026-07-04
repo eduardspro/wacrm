@@ -342,7 +342,7 @@ export default function ContactsPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-foreground">Contacts</h1>
+          <h1 className="text-2xl font-bold text-foreground">Contactos</h1>
           <p className="text-sm text-muted-foreground mt-1">
             Manage your contact list. {totalCount > 0 && `${totalCount} total contacts.`}
           </p>
@@ -365,8 +365,7 @@ export default function ContactsPage() {
             onClick={() => setImportOpen(true)}
             className="border-border text-muted-foreground hover:bg-muted"
           >
-            <Upload className="size-4" />
-            Import
+            <Upload className="size-4" />Importar
           </GatedButton>
           <GatedButton
             canAct={canEdit}
@@ -540,11 +539,11 @@ export default function ContactsPage() {
                   aria-label="Select all contacts on this page"
                 />
               </TableHead>
-              <TableHead className="text-muted-foreground">Name</TableHead>
+              <TableHead className="text-muted-foreground">Nombre</TableHead>
               <TableHead className="text-muted-foreground">Phone</TableHead>
-              <TableHead className="text-muted-foreground hidden md:table-cell">Email</TableHead>
+              <TableHead className="text-muted-foreground hidden md:table-cell">Correo electrónico</TableHead>
               <TableHead className="text-muted-foreground hidden lg:table-cell">Company</TableHead>
-              <TableHead className="text-muted-foreground hidden md:table-cell">Tags</TableHead>
+              <TableHead className="text-muted-foreground hidden md:table-cell">Etiquetas</TableHead>
               <TableHead className="text-muted-foreground hidden lg:table-cell">Created</TableHead>
               <TableHead className="text-muted-foreground w-12" />
             </TableRow>
@@ -668,8 +667,7 @@ export default function ContactsPage() {
                           }}
                           className="text-popover-foreground focus:bg-muted focus:text-foreground"
                         >
-                          <Pencil className="size-4" />
-                          Edit
+                          <Pencil className="size-4" />Editar
                         </DropdownMenuItem>
                         <DropdownMenuSeparator className="bg-border" />
                         <DropdownMenuItem
@@ -679,8 +677,7 @@ export default function ContactsPage() {
                             confirmDelete(contact);
                           }}
                         >
-                          <Trash2 className="size-4" />
-                          Delete
+                          <Trash2 className="size-4" />Eliminar
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
@@ -782,8 +779,7 @@ export default function ContactsPage() {
               variant="outline"
               onClick={() => setDeleteConfirmOpen(false)}
               className="border-border text-muted-foreground hover:bg-muted"
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button
               variant="destructive"
@@ -817,8 +813,7 @@ export default function ContactsPage() {
               variant="outline"
               onClick={() => setBulkDeleteOpen(false)}
               className="border-border text-muted-foreground hover:bg-muted"
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button
               variant="destructive"

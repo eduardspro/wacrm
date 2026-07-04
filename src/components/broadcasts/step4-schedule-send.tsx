@@ -112,7 +112,7 @@ export function Step4ScheduleSend({
 
       {/* Summary Card */}
       <div className="rounded-xl border border-border bg-card/50 p-4 space-y-3">
-        <p className="text-sm font-medium text-foreground">Summary</p>
+        <p className="text-sm font-medium text-foreground">Resumen</p>
         <div className="grid grid-cols-2 gap-3 text-sm">
           <div>
             <p className="text-xs text-muted-foreground">Template</p>
@@ -136,7 +136,7 @@ export function Step4ScheduleSend({
             </div>
           </div>
           <div>
-            <p className="text-xs text-muted-foreground">Language</p>
+            <p className="text-xs text-muted-foreground">Idioma</p>
             <p className="text-foreground">{template.language ?? 'en_US'}</p>
           </div>
         </div>
@@ -168,8 +168,7 @@ export function Step4ScheduleSend({
           disabled={isProcessing}
           className="border-border text-muted-foreground"
         >
-          <ArrowLeft className="h-4 w-4" />
-          Back
+          <ArrowLeft className="h-4 w-4" />Volver
         </Button>
 
         <div className="flex items-center gap-2">
@@ -213,8 +212,7 @@ export function Step4ScheduleSend({
                 variant="outline"
                 onClick={() => setShowConfirm(false)}
                 className="border-border text-muted-foreground"
-              >
-                Cancel
+              >Cancelar
               </Button>
               <Button
                 onClick={() => {

@@ -249,8 +249,7 @@ export function ProfileForm() {
                   disabled={saving}
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  <Trash2 className="size-4" />
-                  Remove
+                  <Trash2 className="size-4" />Quitar
                 </Button>
               )}
               <p className="w-full text-xs text-muted-foreground">
@@ -277,8 +276,7 @@ export function ProfileForm() {
 
           {/* Email */}
           <div className="space-y-2">
-            <Label htmlFor="profile-email" className="text-foreground">
-              Email
+            <Label htmlFor="profile-email" className="text-foreground">Correo electrónico
             </Label>
             <Input
               id="profile-email"

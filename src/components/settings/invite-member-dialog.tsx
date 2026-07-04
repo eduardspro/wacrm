@@ -219,8 +219,7 @@ export function InviteMemberDialog({
                   onClick={copyToClipboard}
                   className="bg-primary hover:bg-primary/90 text-primary-foreground shrink-0"
                 >
-                  <Copy className="size-4" />
-                  Copy
+                  <Copy className="size-4" />Copiar
                 </Button>
               </div>
 
@@ -262,8 +261,7 @@ export function InviteMemberDialog({
               <Button
                 onClick={() => onOpenChange(false)}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                Done
+              >Listo
               </Button>
             </DialogFooter>
           </>
@@ -288,9 +286,9 @@ export function InviteMemberDialog({
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="admin">Admin</SelectItem>
-                    <SelectItem value="agent">Agent</SelectItem>
-                    <SelectItem value="viewer">Viewer</SelectItem>
+                    <SelectItem value="admin">Administrador</SelectItem>
+                    <SelectItem value="agent">Agente</SelectItem>
+                    <SelectItem value="viewer">Observador</SelectItem>
                   </SelectContent>
                 </Select>
                 <p className="text-xs text-muted-foreground">
@@ -341,8 +339,7 @@ export function InviteMemberDialog({
                 variant="outline"
                 onClick={() => onOpenChange(false)}
                 className="border-border text-muted-foreground hover:bg-muted"
-              >
-                Cancel
+              >Cancelar
               </Button>
               <Button
                 onClick={handleCreate}

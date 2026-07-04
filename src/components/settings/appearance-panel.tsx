@@ -24,7 +24,7 @@ export function AppearancePanel() {
   return (
     <section className="max-w-3xl animate-in fade-in-50 duration-200">
       <SettingsPanelHead
-        title="Appearance"
+        title="Apariencia"
         description="Set the mode and accent colour used across the app. Saved to this device — try it, it changes live."
       />
 
@@ -110,8 +110,7 @@ function ModeCard({
       </span>
       {isActive && (
         <span className="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-medium text-primary">
-          <Check className="h-3 w-3" />
-          Active
+          <Check className="h-3 w-3" />Activo
         </span>
       )}
     </button>
@@ -157,8 +156,7 @@ function ThemeCard({
         />
         {isActive && (
           <span className="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-medium text-primary">
-            <Check className="h-3 w-3" />
-            Active
+            <Check className="h-3 w-3" />Activo
           </span>
         )}
       </div>

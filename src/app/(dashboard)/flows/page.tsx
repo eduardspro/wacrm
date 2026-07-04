@@ -55,9 +55,9 @@ interface FlowRow {
 }
 
 const STATUS_LABELS: Record<FlowRow["status"], string> = {
-  draft: "Draft",
-  active: "Active",
-  archived: "Archived",
+  draft: "Borrador",
+  active: "Activo",
+  archived: "Archivado",
 };
 
 const STATUS_COLORS: Record<FlowRow["status"], string> = {
@@ -204,7 +204,7 @@ export default function FlowsPage() {
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-semibold text-foreground">Flows</h1>
+            <h1 className="text-2xl font-semibold text-foreground">Flujos</h1>
             <span className="inline-flex items-center rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-300">
               Beta
             </span>
@@ -308,8 +308,7 @@ export default function FlowsPage() {
               variant="ghost"
               onClick={() => setCreateOpen(false)}
               disabled={creating}
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button onClick={handleCreate} disabled={!newName.trim() || creating}>
               {creating && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -405,8 +404,7 @@ function FlowCard({
 
       <div className="mt-4 flex items-center justify-end gap-2 border-t border-border pt-3">
         <Button variant="ghost" size="sm" onClick={onEdit}>
-          <Pencil className="h-3.5 w-3.5" />
-          Edit
+          <Pencil className="h-3.5 w-3.5" />Editar
         </Button>
         <Button
           variant="ghost"
@@ -414,8 +412,7 @@ function FlowCard({
           onClick={onDelete}
           className="text-red-400 hover:bg-red-500/10 hover:text-red-300"
         >
-          <Trash2 className="h-3.5 w-3.5" />
-          Delete
+          <Trash2 className="h-3.5 w-3.5" />Eliminar
         </Button>
       </div>
     </div>

@@ -445,8 +445,7 @@ export function MessageComposer({
             className="h-7 text-xs text-amber-400 hover:text-amber-300"
             onClick={onOpenTemplates}
           >
-            <LayoutTemplate className="mr-1 h-3 w-3" />
-            Templates
+            <LayoutTemplate className="mr-1 h-3 w-3" />Plantillas
           </Button>
         </div>
       )}
@@ -504,8 +503,7 @@ export function MessageComposer({
             type="button"
             onClick={cancelRecording}
             className="rounded-md px-2 py-1 text-xs text-muted-foreground hover:bg-card hover:text-foreground"
-          >
-            Cancel
+          >Cancelar
           </button>
           <Button
             size="sm"

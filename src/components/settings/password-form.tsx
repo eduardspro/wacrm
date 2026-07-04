@@ -84,8 +84,7 @@ export function PasswordForm() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-foreground">
-          <KeyRound className="size-4 text-primary" />
-          Password
+          <KeyRound className="size-4 text-primary" />Contraseña
         </CardTitle>
         <CardDescription className="text-muted-foreground">
           Use at least {MIN_PASSWORD} characters. You will stay signed in on
@@ -96,8 +95,7 @@ export function PasswordForm() {
       <CardContent>
         <form onSubmit={onSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="current-password" className="text-foreground">
-              Current password
+            <Label htmlFor="current-password" className="text-foreground">Contraseña actual
             </Label>
             <Input
               id="current-password"
@@ -112,8 +110,7 @@ export function PasswordForm() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="space-y-2">
-              <Label htmlFor="new-password" className="text-foreground">
-                New password
+              <Label htmlFor="new-password" className="text-foreground">Nueva contraseña
               </Label>
               <Input
                 id="new-password"

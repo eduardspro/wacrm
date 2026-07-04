@@ -14,7 +14,7 @@
  *     "true" / "false", list row title) so a branching flow reads
  *     as a real decision tree.
  *   - Click a node → side-sheet opens with the same per-node form
- *     the list view uses, plus "Set as entry" / "Delete".
+ *     the list view uses, plus "Set as entry" / "Eliminar".
  *   - Drag from a source handle on one node to a target handle on
  *     another → wires that slot's `next_node_key`. Per-slot handles
  *     for multi-outgoing types (condition, send_buttons, send_list)

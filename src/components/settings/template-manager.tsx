@@ -580,8 +580,7 @@ export function TemplateManager() {
                         aria-label="Edit template"
                         className="text-muted-foreground hover:text-primary hover:bg-primary/10 h-8 px-2"
                       >
-                        <Pencil className="size-3.5" />
-                        Edit
+                        <Pencil className="size-3.5" />Editar
                       </Button>
                     )}
                     {(statusKey === 'REJECTED' || statusKey === 'PAUSED') && (
@@ -709,7 +708,7 @@ export function TemplateManager() {
               </div>
 
               <div className="space-y-2">
-                <Label className="text-muted-foreground">Language</Label>
+                <Label className="text-muted-foreground">Idioma</Label>
                 <Input
                   list="template-language-codes"
                   placeholder="en_US"
@@ -1062,8 +1061,7 @@ export function TemplateManager() {
               variant="outline"
               onClick={() => setDialogOpen(false)}
               className="border-border text-muted-foreground hover:bg-muted"
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button
               onClick={handleSubmit}
@@ -1109,8 +1107,7 @@ export function TemplateManager() {
               onClick={() => setTemplateToDelete(null)}
               disabled={deletingId !== null}
               className="border-border text-muted-foreground hover:bg-muted"
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button
               onClick={confirmDelete}

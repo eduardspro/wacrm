@@ -110,8 +110,8 @@ interface MessageThreadProps {
 
 function formatDateSeparator(dateStr: string): string {
   const date = new Date(dateStr);
-  if (isToday(date)) return "Today";
-  if (isYesterday(date)) return "Yesterday";
+  if (isToday(date)) return "Hoy";
+  if (isYesterday(date)) return "Ayer";
   return format(date, "MMMM d, yyyy");
 }
 
@@ -133,8 +133,8 @@ function groupMessagesByDate(messages: Message[]) {
 }
 
 const STATUS_OPTIONS: { label: string; value: ConversationStatus; color: string }[] = [
-  { label: "Open", value: "open", color: "text-primary" },
-  { label: "Pending", value: "pending", color: "text-amber-400" },
+  { label: "Abierto", value: "open", color: "text-primary" },
+  { label: "Pendiente", value: "pending", color: "text-amber-400" },
   { label: "Closed", value: "closed", color: "text-muted-foreground" },
 ];
 
@@ -806,7 +806,7 @@ export function MessageThread({
   const currentAssignee = profiles.find((p) => p.user_id === assignedAgentId);
   const assignLabel = assignedAgentId
     ? (currentAssignee?.full_name ?? "Assigned")
-    : "Assign";
+    : "Asignar";
 
   return (
     // `min-w-0` is load-bearing: the page already puts min-w-0 on the
@@ -894,7 +894,7 @@ export function MessageThread({
               onClick={handleRefreshClick}
               disabled={isRefreshing}
               aria-label="Refresh conversation"
-              title="Refresh"
+              title="Actualizar"
               className={cn(
                 "inline-flex h-7 w-7 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:opacity-60",
               )}
@@ -911,7 +911,7 @@ export function MessageThread({
                   "inline-flex items-center justify-center h-7 gap-1 px-2 text-xs rounded-md hover:bg-muted",
                   currentStatus?.color ?? "text-muted-foreground"
                 )}>
-                {currentStatus?.label ?? "Status"}
+                {currentStatus?.label ?? "Estado"}
                 <ChevronDown className="h-3 w-3" />
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -1005,7 +1005,7 @@ export function MessageThread({
           </div>
         ) : messages.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12">
-            <p className="text-sm text-muted-foreground">No messages yet</p>
+            <p className="text-sm text-muted-foreground">No hay mensajes aún</p>
             <p className="text-xs text-muted-foreground">
               Send a template to start the conversation
             </p>

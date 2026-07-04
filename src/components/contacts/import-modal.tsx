@@ -511,11 +511,9 @@ export function ImportModal({
                         <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">
                           Phone
                         </th>
-                        <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">
-                          Name
+                        <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">Nombre
                         </th>
-                        <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">
-                          Email
+                        <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">Correo electrónico
                         </th>
                         {previewHasCompany && (
                           <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">
@@ -523,8 +521,7 @@ export function ImportModal({
                           </th>
                         )}
                         {previewHasTags && (
-                          <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">
-                            Tags
+                          <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">Etiquetas
                           </th>
                         )}
                       </tr>

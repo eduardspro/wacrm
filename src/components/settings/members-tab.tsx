@@ -594,8 +594,7 @@ export function MembersTab() {
               variant="outline"
               onClick={() => setRemovingMember(null)}
               className="border-border text-muted-foreground hover:bg-muted"
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button
               onClick={handleRemove}

@@ -160,7 +160,7 @@ export default function AutomationsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-foreground">Automations</h1>
+          <h1 className="text-2xl font-bold text-foreground">Automatizaciones</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             Build workflows that react to WhatsApp® events automatically.
           </p>
@@ -242,8 +242,7 @@ export default function AutomationsPage() {
               variant="ghost"
               onClick={() => setPendingDelete(null)}
               disabled={deleting}
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button
               variant="destructive"
@@ -338,8 +337,7 @@ function AutomationCard({
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem onClick={onEdit}>
-                <Pencil className="h-4 w-4" />
-                Edit
+                <Pencil className="h-4 w-4" />Editar
               </DropdownMenuItem>
               <DropdownMenuItem onClick={onDuplicate}>
                 <Copy className="h-4 w-4" />
@@ -351,8 +349,7 @@ function AutomationCard({
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem variant="destructive" onClick={onDelete}>
-                <Trash2 className="h-4 w-4" />
-                Delete
+                <Trash2 className="h-4 w-4" />Eliminar
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

@@ -41,7 +41,7 @@ const SPEC_DEFAULT_STAGES = [
   { name: "Qualified", color: "#eab308", position: 1 }, // yellow
   { name: "Proposal Sent", color: "#f97316", position: 2 }, // orange
   { name: "Negotiation", color: "#8b5cf6", position: 3 }, // purple
-  { name: "Won", color: "#22c55e", position: 4 }, // green
+  { name: "Ganado", color: "#22c55e", position: 4 }, // green
 ];
 
 export default function PipelinesPage() {
@@ -447,8 +447,7 @@ export default function PipelinesPage() {
               variant="outline"
               onClick={() => setNewPipelineOpen(false)}
               className="border-border text-muted-foreground hover:bg-muted"
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button
               onClick={handleCreatePipeline}

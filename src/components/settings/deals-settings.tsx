@@ -119,7 +119,7 @@ export function DealsSettings() {
                   Saving...
                 </>
               ) : (
-                "Save"
+                "Guardar"
               )}
             </Button>
           )}

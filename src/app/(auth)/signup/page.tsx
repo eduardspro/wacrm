@@ -49,12 +49,12 @@ function SignupPageInner() {
     setError(null);
 
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
+      setError("Las contraseñas no coinciden");
       return;
     }
 
     if (password.length < 6) {
-      setError("Password must be at least 6 characters");
+      setError("La contraseña debe tener al menos 6 caracteres");
       return;
     }
 
@@ -97,8 +97,7 @@ function SignupPageInner() {
             <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
               <CheckCircle className="h-6 w-6 text-primary" />
             </div>
-            <CardTitle className="text-xl text-foreground">
-              Check your email
+            <CardTitle className="text-xl text-foreground">Revisa tu correo
             </CardTitle>
             <CardDescription className="text-muted-foreground">
               We&apos;ve sent a confirmation link to{" "}
@@ -117,8 +116,7 @@ function SignupPageInner() {
               <Button
                 variant="outline"
                 className="w-full border-border text-muted-foreground hover:bg-muted hover:text-foreground"
-              >
-                Back to sign in
+              >Volver a iniciar sesión
               </Button>
             </Link>
           </CardContent>
@@ -156,13 +154,12 @@ function SignupPageInner() {
             )}
 
             <div className="flex flex-col gap-2">
-              <Label htmlFor="fullName" className="text-muted-foreground">
-                Full name
+              <Label htmlFor="fullName" className="text-muted-foreground">Nombre completo
               </Label>
               <Input
                 id="fullName"
                 type="text"
-                placeholder="John Doe"
+                placeholder="Tu nombre"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 required
@@ -171,13 +168,12 @@ function SignupPageInner() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <Label htmlFor="email" className="text-muted-foreground">
-                Email
+              <Label htmlFor="email" className="text-muted-foreground">Correo electrónico
               </Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="you@example.com"
+                placeholder="tu@ejemplo.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -186,13 +182,12 @@ function SignupPageInner() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <Label htmlFor="password" className="text-muted-foreground">
-                Password
+              <Label htmlFor="password" className="text-muted-foreground">Contraseña
               </Label>
               <Input
                 id="password"
                 type="password"
-                placeholder="At least 6 characters"
+                placeholder="Al menos 6 caracteres"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -201,13 +196,12 @@ function SignupPageInner() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <Label htmlFor="confirmPassword" className="text-muted-foreground">
-                Confirm password
+              <Label htmlFor="confirmPassword" className="text-muted-foreground">Confirmar contraseña
               </Label>
               <Input
                 id="confirmPassword"
                 type="password"
-                placeholder="Repeat your password"
+                placeholder="Repite tu contraseña"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
@@ -233,8 +227,7 @@ function SignupPageInner() {
                   : "/login"
               }
               className="text-primary hover:text-primary/80"
-            >
-              Sign in
+            >Iniciar sesión
             </Link>
           </p>
         </CardContent>

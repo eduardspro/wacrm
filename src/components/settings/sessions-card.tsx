@@ -88,8 +88,7 @@ export function SessionsCard() {
               variant="ghost"
               onClick={() => setOpen(false)}
               disabled={signingOut}
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button type="button" onClick={onConfirm} disabled={signingOut}>
               {signingOut ? (

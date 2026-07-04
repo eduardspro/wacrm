@@ -237,8 +237,7 @@ export function ContactForm({
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="cf-name" className="text-muted-foreground">
-              Name
+            <Label htmlFor="cf-name" className="text-muted-foreground">Nombre
             </Label>
             <Input
               id="cf-name"
@@ -298,8 +297,7 @@ export function ContactForm({
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="cf-email" className="text-muted-foreground">
-              Email
+            <Label htmlFor="cf-email" className="text-muted-foreground">Correo electrónico
             </Label>
             <Input
               id="cf-email"
@@ -325,7 +323,7 @@ export function ContactForm({
           </div>
 
           <div className="space-y-2">
-            <Label className="text-muted-foreground">Tags</Label>
+            <Label className="text-muted-foreground">Etiquetas</Label>
             {loadingTags ? (
               <div className="flex items-center gap-2 text-muted-foreground text-sm">
                 <Loader2 className="size-3 animate-spin" />
@@ -369,8 +367,7 @@ export function ContactForm({
               variant="outline"
               onClick={() => onOpenChange(false)}
               className="border-border text-muted-foreground hover:bg-muted"
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button
               type="submit"

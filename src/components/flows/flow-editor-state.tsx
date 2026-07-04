@@ -91,7 +91,7 @@ export interface FlowEditorContextValue {
   canActivate: boolean;
 
   // Node mutations. addNode returns the generated key so the caller
-  // (a NodeCard "Add" button or canvas "+" button) can scroll to /
+  // (a NodeCard "Agregar" button or canvas "+" button) can scroll to /
   // focus / open the new node.
   addNode: (type: NodeType) => string;
   updateNode: (key: string, patch: Partial<BuilderNode>) => void;

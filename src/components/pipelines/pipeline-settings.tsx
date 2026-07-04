@@ -223,8 +223,7 @@ export function PipelineSettings({
                 variant="outline"
                 onClick={() => setShowDeleteConfirm(false)}
                 className="border-border bg-transparent text-muted-foreground hover:bg-muted"
-              >
-                Cancel
+              >Cancelar
               </Button>
               <Button
                 onClick={handleDeletePipeline}
@@ -317,8 +316,7 @@ export function PipelineSettings({
                     disabled={!newStageName.trim()}
                     className="shrink-0 border-border bg-transparent text-muted-foreground hover:bg-muted"
                   >
-                    <Plus className="mr-1 h-3 w-3" />
-                    Add
+                    <Plus className="mr-1 h-3 w-3" />Agregar
                   </Button>
                 </div>
               </div>
@@ -345,8 +343,7 @@ export function PipelineSettings({
                 variant="outline"
                 onClick={() => onOpenChange(false)}
                 className="border-border bg-transparent text-muted-foreground hover:bg-muted"
-              >
-                Cancel
+              >Cancelar
               </Button>
               <Button
                 onClick={handleSave}

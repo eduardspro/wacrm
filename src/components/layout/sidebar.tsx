@@ -38,28 +38,28 @@ const ROLE_CHIP: Record<
 > = {
   owner: {
     icon: Crown,
-    label: "Owner",
+    label: "Propietario",
     // Amber: scarce, immutable, "the boss" — gets visual emphasis.
     className:
       "border-amber-500/40 bg-amber-500/10 text-amber-300",
   },
   admin: {
     icon: Shield,
-    label: "Admin",
+    label: "Administrador",
     // Primary-tinted: significant but not as scarce as owner.
     className:
       "border-primary/40 bg-primary/10 text-primary",
   },
   agent: {
     icon: UserCog,
-    label: "Agent",
+    label: "Agente",
     // Neutral slate: the operational default.
     className:
       "border-border bg-muted text-foreground",
   },
   viewer: {
     icon: User,
-    label: "Viewer",
+    label: "Observador",
     // Muted slate: read-only role; visually quieter than agent.
     className:
       "border-border bg-card text-muted-foreground",
@@ -90,19 +90,19 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/inbox", label: "Inbox", icon: MessageSquare },
-  { href: "/notifications", label: "Notifications", icon: Bell },
-  { href: "/contacts", label: "Contacts", icon: Users },
-  { href: "/pipelines", label: "Pipelines", icon: GitBranch },
-  { href: "/broadcasts", label: "Broadcasts", icon: Radio },
-  { href: "/automations", label: "Automations", icon: Zap },
-  { href: "/flows", label: "Flows", icon: Workflow, beta: true },
-  { href: "/agents", label: "AI Agents", icon: Bot },
+  { href: "/dashboard", label: "Panel", icon: LayoutDashboard },
+  { href: "/inbox", label: "Bandeja", icon: MessageSquare },
+  { href: "/notifications", label: "Notificaciones", icon: Bell },
+  { href: "/contacts", label: "Contactos", icon: Users },
+  { href: "/pipelines", label: "Pipeline", icon: GitBranch },
+  { href: "/broadcasts", label: "Difusiones", icon: Radio },
+  { href: "/automations", label: "Automatizaciones", icon: Zap },
+  { href: "/flows", label: "Flujos", icon: Workflow, beta: true },
+  { href: "/agents", label: "Agentes IA", icon: Bot },
 ];
 
 const bottomNavItems = [
-  { href: "/settings", label: "Settings", icon: Settings },
+  { href: "/settings", label: "Configuración", icon: Settings },
 ];
 
 interface SidebarProps {
@@ -238,8 +238,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
                       <span
                         aria-label="Beta feature"
                         className="rounded-full border border-amber-500/40 bg-amber-500/10 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-amber-300"
-                      >
-                        Beta
+                      >Beta
                       </span>
                     )}
                     {showUnreadDot && (
@@ -366,8 +365,7 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
                   />
                 }
               >
-                <User className="size-4" />
-                Profile
+                <User className="size-4" />Perfil
               </DropdownMenuItem>
               <DropdownMenuItem
                 render={
@@ -378,16 +376,14 @@ export function Sidebar({ open = false, onClose }: SidebarProps) {
                   />
                 }
               >
-                <Settings className="size-4" />
-                Settings
+                <Settings className="size-4" />Configuración
               </DropdownMenuItem>
               <DropdownMenuSeparator className="bg-border" />
               <DropdownMenuItem
                 onClick={signOut}
                 className="text-popover-foreground focus:bg-accent focus:text-accent-foreground"
               >
-                <LogOut className="size-4" />
-                Sign out
+                <LogOut className="size-4" />Cerrar sesión
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

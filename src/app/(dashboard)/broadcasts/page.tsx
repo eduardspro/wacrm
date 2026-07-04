@@ -179,7 +179,7 @@ export default function BroadcastsPage() {
 
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-foreground">Broadcasts</h1>
+          <h1 className="text-2xl font-bold text-foreground">Difusiones</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             Send bulk messages to your contacts using approved templates.
           </p>
@@ -217,14 +217,14 @@ export default function BroadcastsPage() {
           <Table>
             <TableHeader>
               <TableRow className="border-border hover:bg-transparent">
-                <TableHead className="text-muted-foreground">Name</TableHead>
+                <TableHead className="text-muted-foreground">Nombre</TableHead>
                 <TableHead className="hidden text-muted-foreground md:table-cell">Template</TableHead>
                 <TableHead className="hidden text-right text-muted-foreground sm:table-cell">
                   Recipients
                 </TableHead>
                 <TableHead className="hidden text-muted-foreground lg:table-cell">Delivery</TableHead>
-                <TableHead className="hidden text-muted-foreground lg:table-cell">Read</TableHead>
-                <TableHead className="text-muted-foreground">Status</TableHead>
+                <TableHead className="hidden text-muted-foreground lg:table-cell">Leído</TableHead>
+                <TableHead className="text-muted-foreground">Estado</TableHead>
                 <TableHead className="hidden text-muted-foreground sm:table-cell">Date</TableHead>
               </TableRow>
             </TableHeader>

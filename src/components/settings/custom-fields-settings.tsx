@@ -26,8 +26,7 @@ export function CustomFieldsSettings() {
           <SlidersHorizontal className="size-4 text-primary" />
           Custom fields
           <SettingsChip variant="admin" className="font-medium">
-            <Shield />
-            Admin
+            <Shield />Administrador
           </SettingsChip>
         </CardTitle>
         <CardDescription className="text-muted-foreground">

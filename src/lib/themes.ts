@@ -14,16 +14,16 @@
  */
 
 export const THEME_IDS = [
+  "cobalt",
   "violet",
   "emerald",
-  "cobalt",
   "amber",
   "rose",
 ] as const;
 
 export type ThemeId = (typeof THEME_IDS)[number];
 
-export const DEFAULT_THEME: ThemeId = "violet";
+export const DEFAULT_THEME: ThemeId = "cobalt";
 
 export const STORAGE_KEY = "wacrm.theme";
 

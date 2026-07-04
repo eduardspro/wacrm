@@ -49,8 +49,7 @@ export default function ForgotPasswordPage() {
             <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
               <CheckCircle className="h-6 w-6 text-primary" />
             </div>
-            <CardTitle className="text-xl text-foreground">
-              Check your email
+            <CardTitle className="text-xl text-foreground">Revisa tu correo
             </CardTitle>
             <CardDescription className="text-muted-foreground">
               We&apos;ve sent a password reset link to{" "}
@@ -63,8 +62,7 @@ export default function ForgotPasswordPage() {
               <Button
                 variant="outline"
                 className="w-full border-border text-muted-foreground hover:bg-muted hover:text-foreground"
-              >
-                Back to sign in
+              >Volver a iniciar sesión
               </Button>
             </Link>
           </CardContent>
@@ -80,7 +78,7 @@ export default function ForgotPasswordPage() {
           <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
             <MessageSquare className="h-6 w-6 text-primary" />
           </div>
-          <CardTitle className="text-xl text-foreground">Reset password</CardTitle>
+          <CardTitle className="text-xl text-foreground">Restablecer contraseña</CardTitle>
           <CardDescription className="text-muted-foreground">
             Enter your email and we&apos;ll send you a reset link
           </CardDescription>
@@ -94,13 +92,12 @@ export default function ForgotPasswordPage() {
             )}
 
             <div className="flex flex-col gap-2">
-              <Label htmlFor="email" className="text-muted-foreground">
-                Email
+              <Label htmlFor="email" className="text-muted-foreground">Correo electrónico
               </Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="you@example.com"
+                placeholder="tu@ejemplo.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -121,8 +118,7 @@ export default function ForgotPasswordPage() {
             href="/login"
             className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-foreground"
           >
-            <ArrowLeft className="h-4 w-4" />
-            Back to sign in
+            <ArrowLeft className="h-4 w-4" />Volver a iniciar sesión
           </Link>
         </CardContent>
       </Card>

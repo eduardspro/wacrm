@@ -19,14 +19,14 @@ import {
 import { ModeToggle } from "@/components/layout/mode-toggle";
 
 const pageTitles: Record<string, string> = {
-  "/dashboard": "Dashboard",
-  "/inbox": "Inbox",
-  "/notifications": "Notifications",
-  "/contacts": "Contacts",
-  "/pipelines": "Pipelines",
-  "/broadcasts": "Broadcasts",
-  "/automations": "Automations",
-  "/settings": "Settings",
+  "/dashboard": "Panel",
+  "/inbox": "Bandeja",
+  "/notifications": "Notificaciones",
+  "/contacts": "Contactos",
+  "/pipelines": "Pipeline",
+  "/broadcasts": "Difusiones",
+  "/automations": "Automatizaciones",
+  "/settings": "Configuración",
 };
 
 function getPageTitle(pathname: string): string {
@@ -34,7 +34,7 @@ function getPageTitle(pathname: string): string {
   const match = Object.entries(pageTitles).find(([path]) =>
     pathname.startsWith(path),
   );
-  return match ? match[1] : "Dashboard";
+  return match ? match[1] : "Panel";
 }
 
 interface HeaderProps {
@@ -115,8 +115,7 @@ export function Header({ onOpenSidebar }: HeaderProps) {
               />
             }
           >
-            <User className="size-4" />
-            Profile
+            <User className="size-4" />Perfil
           </DropdownMenuItem>
           <DropdownMenuItem
             render={
@@ -126,16 +125,14 @@ export function Header({ onOpenSidebar }: HeaderProps) {
               />
             }
           >
-            <SettingsIcon className="size-4" />
-            Settings
+            <SettingsIcon className="size-4" />Configuración
           </DropdownMenuItem>
           <DropdownMenuSeparator className="bg-border" />
           <DropdownMenuItem
             onClick={signOut}
             className="text-popover-foreground focus:bg-accent focus:text-accent-foreground"
           >
-            <LogOut className="size-4" />
-            Sign out
+            <LogOut className="size-4" />Cerrar sesión
           </DropdownMenuItem>
         </DropdownMenuContent>
         </DropdownMenu>

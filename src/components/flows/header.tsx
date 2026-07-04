@@ -112,8 +112,7 @@ export function EditorHeader() {
             onClick={() => void deleteFlow()}
             className="text-red-400 hover:bg-red-500/10 hover:text-red-300"
           >
-            <Trash2 className="h-3.5 w-3.5" />
-            Delete
+            <Trash2 className="h-3.5 w-3.5" />Eliminar
           </Button>
           {state.status === "active" ? (
             <Button
@@ -180,15 +179,15 @@ function StatusChip({ status }: { status: BuilderState["status"] }) {
       // Neutral, not amber — amber is reserved for the adjacent
       // "Edited" dirty signal, so the two don't read as the same alert.
       cls: "border-border bg-muted text-muted-foreground",
-      label: "Draft",
+      label: "Borrador",
     },
     active: {
       cls: "border-emerald-600/40 bg-emerald-500/10 text-emerald-300",
-      label: "Active",
+      label: "Activo",
     },
     archived: {
       cls: "border-border bg-muted/50 text-muted-foreground",
-      label: "Archived",
+      label: "Archivado",
     },
   }[status];
   return (

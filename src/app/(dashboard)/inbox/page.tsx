@@ -112,7 +112,7 @@ export default function InboxPage() {
   // row's own columns — a brand-new conversation arrives without a
   // contact, which surfaced as "Unknown" names, empty avatars, and
   // (when the conv-INSERT event was delayed past the message-INSERT)
-  // conversations stuck on "No messages yet" until the user reloaded.
+  // conversations stuck on "No hay mensajes aún" until the user reloaded.
   // Also self-heals if a realtime event was missed: callers can invoke
   // this whenever they reference a conversation id they don't recognise.
   const hydrateConversation = useCallback(async (convId: string) => {
@@ -408,7 +408,7 @@ export default function InboxPage() {
         // would setMessages([]) on a thread whose messages have
         // already been loaded by MessageThread — and because
         // conversationId didn't change, MessageThread wouldn't
-        // refetch. The thread would read "No messages yet" until a
+        // refetch. The thread would read "No hay mensajes aún" until a
         // full page reload rehydrated state from scratch.
         if (activeConversation?.id === deepLinkConvId) return;
         const match = loaded.find((c) => c.id === deepLinkConvId);

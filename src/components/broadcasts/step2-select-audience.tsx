@@ -455,15 +455,13 @@ export function Step2SelectAudience({
           onClick={onBack}
           className="border-border text-muted-foreground"
         >
-          <ArrowLeft className="h-4 w-4" />
-          Back
+          <ArrowLeft className="h-4 w-4" />Volver
         </Button>
         <Button
           onClick={onNext}
           disabled={!isValid}
           className="bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
-        >
-          Next
+        >Siguiente
           <ArrowRight className="h-4 w-4" />
         </Button>
       </div>

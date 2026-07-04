@@ -355,7 +355,7 @@ export function DealForm({
                 onChange={(e) => setAssignedTo(e.target.value)}
                 className="h-9 w-full rounded-lg border border-border bg-muted px-2.5 text-sm text-foreground outline-none focus:border-primary"
               >
-                <option value="">Unassigned</option>
+                <option value="">Sin asignar</option>
                 {profiles.map((p) => (
                   <option key={p.id} value={p.id}>
                     {p.full_name || p.email}
@@ -365,7 +365,7 @@ export function DealForm({
             </div>
 
             <div className="grid gap-2">
-              <Label className="text-muted-foreground">Notes</Label>
+              <Label className="text-muted-foreground">Notas</Label>
               <Textarea
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
@@ -376,8 +376,7 @@ export function DealForm({
 
             {deal && (
               <div className="space-y-2 rounded-lg border border-border bg-muted/50 p-3">
-                <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                  Status
+                <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Estado
                 </p>
                 <div className="flex gap-2">
                   <Button
@@ -432,8 +431,7 @@ export function DealForm({
                 variant="outline"
                 onClick={() => onOpenChange(false)}
                 className="flex-1 border-border bg-transparent text-muted-foreground hover:bg-muted"
-              >
-                Cancel
+              >Cancelar
               </Button>
               <Button
                 onClick={handleSave}
@@ -454,8 +452,7 @@ export function DealForm({
                       onClick={() => setConfirmDelete(false)}
                       disabled={deleting}
                       className="rounded px-2 py-1 text-muted-foreground hover:bg-muted"
-                    >
-                      Cancel
+                    >Cancelar
                     </button>
                     <button
                       type="button"
@@ -463,7 +460,7 @@ export function DealForm({
                       disabled={deleting}
                       className="rounded bg-red-600 px-2 py-1 font-medium text-white hover:bg-red-700 disabled:opacity-50"
                     >
-                      {deleting ? "Deleting..." : "Confirm"}
+                      {deleting ? "Deleting..." : "Confirmar"}
                     </button>
                   </div>
                 </div>

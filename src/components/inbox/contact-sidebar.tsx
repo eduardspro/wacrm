@@ -180,8 +180,7 @@ export function ContactSidebar({ contact }: ContactSidebarProps) {
           {/* Tags */}
           <div>
             <div className="flex items-center gap-2 px-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              <TagIcon className="h-3 w-3" />
-              Tags
+              <TagIcon className="h-3 w-3" />Etiquetas
             </div>
             <div className="mt-2 flex flex-wrap gap-1">
               {tags.length === 0 ? (
@@ -253,8 +252,7 @@ export function ContactSidebar({ contact }: ContactSidebarProps) {
           {/* Notes */}
           <div>
             <div className="flex items-center gap-2 px-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              <StickyNote className="h-3 w-3" />
-              Notes
+              <StickyNote className="h-3 w-3" />Notas
             </div>
             <div className="mt-2">
               <div className="flex gap-2">

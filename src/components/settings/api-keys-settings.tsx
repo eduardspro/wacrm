@@ -135,7 +135,7 @@ export function ApiKeysSettings() {
   return (
     <section className="animate-in fade-in-50 space-y-6 duration-200">
       <SettingsPanelHead
-        title="API keys"
+        title="Claves API"
         description={
           <>
             Keys authenticate the public REST API (
@@ -374,8 +374,7 @@ function CreateKeyDialog({
                   onFocus={(e) => e.currentTarget.select()}
                 />
                 <Button type="button" variant="outline" onClick={copyKey}>
-                  <Copy className="size-4" />
-                  Copy
+                  <Copy className="size-4" />Copiar
                 </Button>
               </div>
             </div>
@@ -386,8 +385,7 @@ function CreateKeyDialog({
                   reset();
                   onOpenChange(false);
                 }}
-              >
-                Done
+              >Listo
               </Button>
             </DialogFooter>
           </>
@@ -405,8 +403,7 @@ function CreateKeyDialog({
 
             <div className="space-y-4">
               <div className="space-y-1.5">
-                <Label htmlFor="api-key-name" className="text-muted-foreground">
-                  Name
+                <Label htmlFor="api-key-name" className="text-muted-foreground">Nombre
                 </Label>
                 <Input
                   id="api-key-name"
@@ -459,8 +456,7 @@ function CreateKeyDialog({
                   onOpenChange(false);
                 }}
                 className="border-border text-muted-foreground hover:bg-muted"
-              >
-                Cancel
+              >Cancelar
               </Button>
               <Button onClick={handleCreate} disabled={submitting}>
                 {submitting ? (

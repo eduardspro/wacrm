@@ -316,8 +316,7 @@ export default function BroadcastDetailPage() {
               onClick={() => setConfirmDelete(false)}
               disabled={deleting}
               className="h-7 border-border bg-transparent text-muted-foreground hover:bg-muted"
-            >
-              Cancel
+            >Cancelar
             </Button>
             <Button
               size="sm"
@@ -341,8 +340,7 @@ export default function BroadcastDetailPage() {
             }
             className="border-red-500/30 bg-transparent text-red-400 hover:bg-red-500/10 disabled:opacity-40"
           >
-            <Trash2 className="h-3.5 w-3.5" />
-            Delete
+            <Trash2 className="h-3.5 w-3.5" />Eliminar
           </Button>
         )}
       </div>
@@ -357,21 +355,21 @@ export default function BroadcastDetailPage() {
           color="bg-muted text-muted-foreground"
         />
         <StatCard
-          label="Sent"
+          label="Enviado"
           value={broadcast.sent_count}
           total={broadcast.total_recipients}
           icon={<Send className="h-4 w-4" />}
           color="bg-primary/10 text-primary"
         />
         <StatCard
-          label="Delivered"
+          label="Entregado"
           value={broadcast.delivered_count}
           total={broadcast.total_recipients}
           icon={<CheckCheck className="h-4 w-4" />}
           color="bg-teal-500/10 text-teal-400"
         />
         <StatCard
-          label="Read"
+          label="Leído"
           value={broadcast.read_count}
           total={broadcast.total_recipients}
           icon={<Eye className="h-4 w-4" />}
@@ -385,7 +383,7 @@ export default function BroadcastDetailPage() {
           color="bg-indigo-500/10 text-indigo-400"
         />
         <StatCard
-          label="Failed"
+          label="Fallido"
           value={broadcast.failed_count}
           total={broadcast.total_recipients}
           icon={<AlertCircle className="h-4 w-4" />}
@@ -472,10 +470,10 @@ export default function BroadcastDetailPage() {
                 <TableRow className="border-border hover:bg-transparent">
                   <TableHead className="text-muted-foreground">Contact</TableHead>
                   <TableHead className="text-muted-foreground">Phone</TableHead>
-                  <TableHead className="text-muted-foreground">Status</TableHead>
-                  <TableHead className="text-muted-foreground">Sent</TableHead>
-                  <TableHead className="text-muted-foreground">Delivered</TableHead>
-                  <TableHead className="text-muted-foreground">Read</TableHead>
+                  <TableHead className="text-muted-foreground">Estado</TableHead>
+                  <TableHead className="text-muted-foreground">Enviado</TableHead>
+                  <TableHead className="text-muted-foreground">Entregado</TableHead>
+                  <TableHead className="text-muted-foreground">Leído</TableHead>
                   <TableHead className="text-muted-foreground">Error</TableHead>
                 </TableRow>
               </TableHeader>

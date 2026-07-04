@@ -351,8 +351,8 @@ function ContactFieldSelect({
       onChange={(e) => onChange(e.target.value)}
       className={SELECT_CLASS}
     >
-      <option value="name">Name</option>
-      <option value="email">Email</option>
+      <option value="name">Nombre</option>
+      <option value="email">Correo electrónico</option>
       <option value="company">Company</option>
       {customFields.length > 0 && (
         <optgroup label="Custom fields">
@@ -532,7 +532,7 @@ function SendTemplateFields({
             className="bg-muted text-foreground"
           />
         </FieldBlock>
-        <FieldBlock label="Language">
+        <FieldBlock label="Idioma">
           <Input
             value={language}
             onChange={(e) =>
@@ -673,7 +673,7 @@ export function AutomationBuilder({ initial }: { initial: BuilderInitial }) {
 
   return (
     <div className="fixed inset-0 flex flex-col bg-background">
-      {/* Top bar. At sub-sm widths the "Active" label is hidden and the
+      {/* Top bar. At sub-sm widths the "Activo" label is hidden and the
           switch moves to the right of the save button, so the name input
           gets maximum width. */}
       <header className="flex flex-shrink-0 items-center gap-2 border-b border-border bg-card/80 px-3 py-3 sm:gap-3 sm:px-4">
@@ -692,11 +692,11 @@ export function AutomationBuilder({ initial }: { initial: BuilderInitial }) {
           className="min-w-0 flex-1 rounded-md bg-transparent px-2 py-1 text-sm font-semibold text-foreground placeholder:text-muted-foreground focus:bg-muted focus:outline-none sm:text-base"
         />
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span className="hidden sm:inline">Active</span>
+          <span className="hidden sm:inline">Activo</span>
           <Switch
             checked={state.is_active}
             onCheckedChange={(v) => patchTop("is_active", !!v)}
-            aria-label="Active"
+            aria-label="Activo"
           />
         </div>
         <Button
@@ -705,7 +705,7 @@ export function AutomationBuilder({ initial }: { initial: BuilderInitial }) {
           className="bg-primary text-primary-foreground hover:bg-primary/90"
         >
           {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-          {isEditing ? "Save" : "Save Draft"}
+          {isEditing ? "Guardar" : "Save Draft"}
         </Button>
       </header>
 
@@ -1050,8 +1050,7 @@ function StepRenderer({
                   size="sm"
                   onClick={() => props.deleteStepAt(path)}
                 >
-                  <Trash2 className="h-3.5 w-3.5" />
-                  Delete
+                  <Trash2 className="h-3.5 w-3.5" />Eliminar
                 </Button>
               </div>
             </div>
@@ -1218,7 +1217,7 @@ function StepEditor({
             </select>
           </FieldBlock>
           {cfg.mode === "specific" && (
-            <FieldBlock label="Agent">
+            <FieldBlock label="Agente">
               <AgentSelect
                 value={(cfg.agent_id as string) ?? ""}
                 onChange={(v) => set({ agent_id: v })}
