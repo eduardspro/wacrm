@@ -56,38 +56,36 @@ export function DealsSettings() {
       .update({ default_currency: selected })
       .eq("id", accountId);
     if (error) {
-      toast.error("Failed to save default currency");
+      toast.error("Error al guardar la moneda");
       setSaving(false);
       return;
     }
-    // Pull the new value back into the auth context so the deal form
-    // and every total pick it up without a full reload.
     await refreshProfile();
     setSaving(false);
-    toast.success("Default currency updated");
+    toast.success("Moneda actualizada");
   }
 
   return (
     <section className="max-w-2xl animate-in fade-in-50 duration-200">
       <SettingsPanelHead
-        title="Deals & currency"
-        description="The currency used for new deals and for pipeline and dashboard totals."
+        title="Negocios y moneda"
+        description="La moneda usada para nuevos negocios y totales del pipeline y panel."
       />
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-foreground">
             <Coins className="size-4 text-primary" />
-            Default currency
+            Moneda por defecto
           </CardTitle>
           <CardDescription className="text-muted-foreground">
-            New deals default to this currency, and pipeline and
-            dashboard totals are shown in it. Existing deals keep the
-            currency they were saved with.
+            Los nuevos negocios usan esta moneda, y los totales del
+            pipeline y panel se muestran en ella. Los negocios existentes
+            mantienen la moneda con la que fueron guardados.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-2 sm:max-w-xs">
-            <Label className="text-muted-foreground">Currency</Label>
+            <Label className="text-muted-foreground">Moneda</Label>
             <select
               value={selected}
               onChange={(e) => setSelected(e.target.value)}
@@ -102,7 +100,7 @@ export function DealsSettings() {
             </select>
             {!canEditSettings && (
               <p className="text-xs text-muted-foreground">
-                Only account admins can change the default currency.
+                Solo administradores pueden cambiar la moneda.
               </p>
             )}
           </div>
