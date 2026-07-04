@@ -75,12 +75,12 @@ export default function ForgotPasswordPage() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <Card className="w-full max-w-md border-border bg-card">
         <CardHeader className="items-center text-center">
-          <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-            <MessageSquare className="h-6 w-6 text-primary" />
+          <div className="mb-4 flex items-center justify-center">
+            <img src="/logIndu.png" alt="INDUTRONICA" className="h-16 w-auto" />
           </div>
           <CardTitle className="text-xl text-foreground">Restablecer contraseña</CardTitle>
           <CardDescription className="text-muted-foreground">
-            Enter your email and we&apos;ll send you a reset link
+            Ingresa tu correo y te enviaremos un enlace de restablecimiento
           </CardDescription>
         </CardHeader>
         <CardContent>
