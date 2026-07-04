@@ -127,14 +127,14 @@ export function PipelineSettings({
     setSaving(false);
 
     if (renameRes.error || stagesRes.error) {
-      toast.error("Failed to save pipeline");
+      toast.error("Error al guardar el pipeline");
       return;
     }
 
     onOpenChange(false);
     onPipelinesChanged();
     onStagesChanged();
-    toast.success("Pipeline saved");
+    toast.success("Pipeline guardado");
   }
 
   async function handleAddStage() {
@@ -151,7 +151,7 @@ export function PipelineSettings({
       .select()
       .single();
     if (error || !data) {
-      toast.error("Failed to add stage");
+      toast.error("Error al agregar etapa");
       return;
     }
     setLocalStages([...localStages, data as PipelineStage]);
@@ -166,7 +166,7 @@ export function PipelineSettings({
       .select("id", { count: "exact", head: true })
       .eq("stage_id", stageId);
     if (count && count > 0) {
-      toast.error("Move or delete deals in this stage first");
+      toast.error("Mueve o elimina los negocios de esta etapa primero");
       return;
     }
     const { error } = await supabase
@@ -174,7 +174,7 @@ export function PipelineSettings({
       .delete()
       .eq("id", stageId);
     if (error) {
-      toast.error("Failed to delete stage");
+      toast.error("Error al eliminar etapa");
       return;
     }
     setLocalStages(localStages.filter((s) => s.id !== stageId));
@@ -189,12 +189,12 @@ export function PipelineSettings({
       .eq("id", pipeline.id);
     setDeleting(false);
     if (error) {
-      toast.error("Failed to delete pipeline");
+      toast.error("Error al eliminar pipeline");
       return;
     }
     onOpenChange(false);
     onPipelinesChanged();
-    toast.success("Pipeline deleted");
+    toast.success("Pipeline eliminado");
   }
 
   return (
@@ -230,7 +230,7 @@ export function PipelineSettings({
                 disabled={deleting}
                 className="bg-red-600 text-white hover:bg-red-700"
               >
-                {deleting ? "Deleting..." : "Delete Pipeline"}
+                {deleting ? "Eliminando..." : "Eliminar Pipeline"}
               </Button>
             </div>
           </div>
@@ -303,7 +303,7 @@ export function PipelineSettings({
                   <Input
                     value={newStageName}
                     onChange={(e) => setNewStageName(e.target.value)}
-                    placeholder="New stage name"
+                    placeholder="Nombre de la nueva etapa"
                     className="border-border bg-muted text-sm text-foreground"
                     onKeyDown={(e) => {
                       if (e.key === "Enter") handleAddStage();
@@ -393,7 +393,7 @@ function SortableStageRow({
         {...attributes}
         {...listeners}
         className="cursor-grab touch-none text-muted-foreground hover:text-foreground active:cursor-grabbing"
-        aria-label="Drag to reorder"
+        aria-label="Arrastrar para reordenar"
       >
         <GripVertical className="h-4 w-4" />
       </button>
@@ -432,7 +432,7 @@ function ColorSwatch({
         onClick={() => setOpen((v) => !v)}
         className="h-4 w-4 rounded-full border border-border"
         style={{ backgroundColor: value }}
-        aria-label="Change color"
+        aria-label="Cambiar color"
       />
       {open && (
         <>

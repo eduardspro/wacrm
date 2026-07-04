@@ -97,7 +97,7 @@ export function CustomFieldsPanel() {
     const name = newName.trim();
     if (!name) return;
     if (!accountId || !user) {
-      toast.error('Your profile is not linked to an account.');
+      toast.error('Tu perfil no está vinculado a una cuenta.');
       return;
     }
     if (isDuplicate(name)) {
@@ -184,7 +184,7 @@ export function CustomFieldsPanel() {
               void handleCreate();
             }
           }}
-          placeholder="New field name…"
+          placeholder="Nombre del nuevo campo…"
           className="bg-muted text-foreground"
         />
         <Button

@@ -99,7 +99,7 @@ export default function AutomationsPage() {
         prev?.map((x) => (x.id === a.id ? { ...x, is_active: !next } : x)) ?? prev,
       )
       const body = await res.json().catch(() => ({}))
-      toast.error(body?.error ?? "Failed to update")
+      toast.error(body?.error ?? "Error al actualizar")
       return
     }
     toast.success(next ? "Automation activated" : "Automation paused")
@@ -109,7 +109,7 @@ export default function AutomationsPage() {
     const res = await fetch(`/api/automations/${a.id}/duplicate`, { method: "POST" })
     if (!res.ok) {
       const body = await res.json().catch(() => ({}))
-      toast.error(body?.error ?? "Failed to duplicate")
+      toast.error(body?.error ?? "Error al duplicar")
       return
     }
     toast.success("Automation duplicated")
@@ -123,7 +123,7 @@ export default function AutomationsPage() {
     setDeleting(false)
     if (!res.ok) {
       const body = await res.json().catch(() => ({}))
-      toast.error(body?.error ?? "Failed to delete")
+      toast.error(body?.error ?? "Error al eliminar")
       return
     }
     toast.success("Automation deleted")
@@ -208,7 +208,7 @@ export default function AutomationsPage() {
           </div>
           <p className="mt-3 text-sm font-medium text-foreground">No hay automatizaciones aún</p>
           <p className="mt-1 text-xs text-muted-foreground">
-            Pick a template above or create one from scratch.
+            "Elige una plantilla arriba o crea una desde cero."
           </p>
         </div>
       ) : (

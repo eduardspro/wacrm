@@ -122,7 +122,7 @@ export function InviteMemberDialog({
 
       if (!res.ok) {
         const payload = await res.json().catch(() => ({}));
-        toast.error(payload.error || 'Failed to create invitation');
+        toast.error(payload.error || 'Error al crear invitación');
         return;
       }
 
@@ -321,7 +321,7 @@ export function InviteMemberDialog({
                   <span className="text-xs text-muted-foreground">(optional)</span>
                 </Label>
                 <Input
-                  placeholder="e.g. Sara — support team"
+                  placeholder="ej. Sara — equipo soporte"
                   value={label}
                   onChange={(e) => setLabel(e.target.value)}
                   maxLength={MAX_LABEL_LEN}

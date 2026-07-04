@@ -56,7 +56,7 @@ export default function AutomationLogsPage({
         setAutomation(autRes.data as Automation | null)
         setLogs((logRes.data ?? []) as AutomationLog[])
       } catch (err) {
-        setError(err instanceof Error ? err.message : "Failed to load logs")
+        setError(err instanceof Error ? err.message : "Error al cargar registros")
       }
     }
     load()

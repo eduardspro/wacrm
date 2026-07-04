@@ -352,7 +352,7 @@ function EntryPicker({
         value={state.entry_node_id}
         nodes={state.nodes}
         onChange={(key) => setState((s) => ({ ...s, entry_node_id: key }))}
-        placeholder="Pick the first node…"
+        placeholder="Elige el primer nodo…"
         className="max-w-xs flex-1"
       />
     </section>
@@ -582,10 +582,10 @@ function AddNodeButton({ onAdd }: { onAdd: (type: NodeType) => void }) {
     <DropdownMenu>
       <DropdownMenuTrigger
         className="border-border bg-card text-foreground hover:bg-muted inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-xs font-medium transition-colors"
-        aria-label="Add node"
+        aria-label="Agregar nodo"
       >
         <Plus className="h-3.5 w-3.5" />
-        Add node
+        Agregar nodo
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="border-border bg-popover">
         {groupNodeTypesByCategory(types).map((group, i) => (

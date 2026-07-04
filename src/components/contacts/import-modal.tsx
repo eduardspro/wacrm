@@ -214,7 +214,7 @@ export function ImportModal({
       const user = session?.user;
       if (!user) throw new Error('Not authenticated');
       if (!accountId)
-        throw new Error('Your profile is not linked to an account.');
+        throw new Error('Tu perfil no está vinculado a una cuenta.');
 
       let imported = 0;
       let skipped = 0;

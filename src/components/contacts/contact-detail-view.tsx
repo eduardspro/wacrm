@@ -213,7 +213,7 @@ export function ContactDetailView({
       .eq('id', contactId);
 
     if (error) {
-      toast.error('Failed to update contact');
+      toast.error('Error al actualizar el contacto');
     } else {
       toast.success('Contact updated');
       fetchContact();
@@ -272,7 +272,7 @@ export function ContactDetailView({
     });
 
     if (error) {
-      toast.error('Failed to add note');
+      toast.error('Error al agregar nota');
     } else {
       setNewNote('');
       fetchNotes();
@@ -288,7 +288,7 @@ export function ContactDetailView({
       .eq('id', noteId);
 
     if (error) {
-      toast.error('Failed to delete note');
+      toast.error('Error al eliminar nota');
     } else {
       setNotes((prev) => prev.filter((n) => n.id !== noteId));
       toast.success('Note deleted');
@@ -323,7 +323,7 @@ export function ContactDetailView({
 
       toast.success('Custom fields saved');
     } catch {
-      toast.error('Failed to save custom fields');
+      toast.error('Error al guardar campos personalizados');
     }
     setSavingCustom(false);
   }
@@ -581,7 +581,7 @@ export function ContactDetailView({
                   <Textarea
                     value={newNote}
                     onChange={(e) => setNewNote(e.target.value)}
-                    placeholder="Write a note..."
+                    placeholder="Escribir una nota..."
                     className="bg-muted border-border text-foreground placeholder:text-muted-foreground min-h-[60px] text-sm resize-none"
                   />
                   <Button
@@ -665,7 +665,7 @@ export function ContactDetailView({
                               [field.id]: e.target.value,
                             }))
                           }
-                          placeholder={`Enter ${field.field_name}...`}
+                          placeholder={`Ingresar ${field.field_name}...`}
                           className="bg-muted border-border text-foreground h-8 text-sm placeholder:text-muted-foreground"
                         />
                       </div>

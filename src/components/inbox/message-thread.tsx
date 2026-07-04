@@ -769,7 +769,7 @@ export function MessageThread({
 
       if (error) {
         console.error("Failed to update assignment:", error);
-        toast.error("Failed to update assignment");
+        toast.error("Error al actualizar asignación");
         return;
       }
 

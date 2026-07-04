@@ -142,7 +142,7 @@ export function ContactForm({
       } = await supabase.auth.getSession();
       const user = session?.user;
       if (!user) throw new Error('Not authenticated');
-      if (!accountId) throw new Error('Your profile is not linked to an account.');
+      if (!accountId) throw new Error('Tu perfil no está vinculado a una cuenta.');
 
       let contactId = contact?.id;
 
@@ -214,7 +214,7 @@ export function ContactForm({
         }
         return;
       }
-      const message = err instanceof Error ? err.message : 'Failed to save contact';
+      const message = err instanceof Error ? err.message : 'Error al guardar el contacto';
       toast.error(message);
     } finally {
       setSaving(false);
@@ -243,7 +243,7 @@ export function ContactForm({
               id="cf-name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="John Doe"
+              placeholder="Nombre completo"
               className="bg-muted border-border text-foreground placeholder:text-muted-foreground"
             />
           </div>
@@ -259,7 +259,7 @@ export function ContactForm({
                 if (dupMatch) setDupMatch(null);
               }}
               onBlur={checkDuplicate}
-              placeholder="+1 234 567 8900"
+              placeholder="+57 300 123 4567"
               className="bg-muted border-border text-foreground placeholder:text-muted-foreground"
             />
             {dupMatch ? (
@@ -303,7 +303,7 @@ export function ContactForm({
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="john@example.com"
+              placeholder="correo@ejemplo.com"
               className="bg-muted border-border text-foreground placeholder:text-muted-foreground"
             />
           </div>
@@ -315,7 +315,7 @@ export function ContactForm({
               id="cf-company"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
-              placeholder="Acme Inc."
+              placeholder="Empresa S.A.S."
               className="bg-muted border-border text-foreground placeholder:text-muted-foreground"
             />
           </div>

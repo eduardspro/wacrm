@@ -65,7 +65,7 @@ function MediaImage({ url, alt }: { url: string; alt: string }) {
     if (url.startsWith("/api/whatsapp/media/")) {
       try {
         const res = await fetch(url);
-        if (!res.ok) throw new Error("Failed to load media");
+        if (!res.ok) throw new Error("Error al cargar multimedia");
         const blob = await res.blob();
         const blobUrl = URL.createObjectURL(blob);
         setSrc(blobUrl);
@@ -131,7 +131,7 @@ function MessageContent({ message }: { message: Message }) {
           {message.media_url ? (
             <MediaImage url={message.media_url} alt="Shared image" />
           ) : (
-            <MediaUnavailable label="Image" />
+            <MediaUnavailable label="Imagen" />
           )}
           {message.content_text && (
             <p className="mt-1 whitespace-pre-wrap break-words text-sm">
@@ -174,7 +174,7 @@ function MessageContent({ message }: { message: Message }) {
 
     case "document":
       if (!message.media_url) {
-        return <MediaUnavailable label={message.content_text || "Document"} />;
+        return <MediaUnavailable label={message.content_text || "Documento"} />;
       }
       return (
         <a
@@ -185,7 +185,7 @@ function MessageContent({ message }: { message: Message }) {
         >
           <FileText className="h-5 w-5 shrink-0 text-muted-foreground" />
           <span className="truncate">
-            {message.content_text || "Document"}
+            {message.content_text || "Documento"}
           </span>
         </a>
       );

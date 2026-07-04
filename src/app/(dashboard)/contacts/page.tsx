@@ -257,7 +257,7 @@ export default function ContactsPage() {
       .eq('id', deleteTarget.id);
 
     if (error) {
-      toast.error('Failed to delete contact');
+      toast.error('Error al eliminar contacto');
     } else {
       toast.success('Contact deleted');
       fetchContacts();
@@ -301,7 +301,7 @@ export default function ContactsPage() {
     const { error } = await supabase.from('contacts').delete().in('id', ids);
 
     if (error) {
-      toast.error('Failed to delete contacts');
+      toast.error('Error al eliminar contactos');
     } else {
       toast.success(`${ids.length} contact${ids.length === 1 ? '' : 's'} deleted`);
       setSelected(new Set());

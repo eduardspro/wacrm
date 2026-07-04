@@ -294,7 +294,7 @@ function TagSelect({
   if (tags.length === 0) {
     return (
       <Input
-        placeholder="Tag id"
+        placeholder="ID de etiqueta"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className="bg-muted text-foreground"
@@ -383,7 +383,7 @@ function AgentSelect({
   if (members.length === 0) {
     return (
       <Input
-        placeholder="Agent id"
+        placeholder="ID del agente"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className="bg-muted text-foreground"
@@ -426,7 +426,7 @@ function DealPipelineFields({
   if (pipelines.length === 0) {
     return (
       <>
-        <FieldBlock label="Pipeline id">
+        <FieldBlock label="ID del Pipeline">
           <Input
             value={pipelineId}
             onChange={(e) =>
@@ -705,7 +705,7 @@ export function AutomationBuilder({ initial }: { initial: BuilderInitial }) {
           className="bg-primary text-primary-foreground hover:bg-primary/90"
         >
           {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-          {isEditing ? "Guardar" : "Save Draft"}
+          {isEditing ? "Guardar" : "Guardar borrador"}
         </Button>
       </header>
 
@@ -1179,7 +1179,7 @@ function StepEditor({
           <Textarea
             value={(cfg.text as string) ?? ""}
             onChange={(e) => set({ text: e.target.value })}
-            placeholder="Hi! Thanks for reaching out…"
+            placeholder="¡Hola! Gracias por contactarnos…"
             className="min-h-24 bg-muted text-foreground"
           />
         </FieldBlock>
@@ -1228,7 +1228,7 @@ function StepEditor({
     case "update_contact_field":
       return (
         <>
-          <FieldBlock label="Field">
+          <FieldBlock label="Campo">
             <ContactFieldSelect
               value={(cfg.field as string) ?? "name"}
               onChange={(v) => set({ field: v })}
@@ -1238,7 +1238,7 @@ function StepEditor({
             <Input
               value={(cfg.value as string) ?? ""}
               onChange={(e) => set({ value: e.target.value })}
-              placeholder="Text or {{ vars.x }} / {{ message.text }}"
+              placeholder="Texto o {{ vars.x }} / {{ message.text }}"
               className="bg-muted text-foreground"
             />
           </FieldBlock>
@@ -1272,7 +1272,7 @@ function StepEditor({
     case "wait":
       return (
         <div className="grid grid-cols-2 gap-2">
-          <FieldBlock label="Amount">
+          <FieldBlock label="Monto">
             <Input
               type="number"
               min={1}
@@ -1281,7 +1281,7 @@ function StepEditor({
               className="bg-muted text-foreground"
             />
           </FieldBlock>
-          <FieldBlock label="Unit">
+          <FieldBlock label="Unidad">
             <select
               value={(cfg.unit as string) ?? "hours"}
               onChange={(e) => set({ unit: e.target.value })}
@@ -1297,7 +1297,7 @@ function StepEditor({
     case "condition":
       return (
         <>
-          <FieldBlock label="Subject">
+          <FieldBlock label="Asunto">
             <select
               value={(cfg.subject as string) ?? "tag_presence"}
               onChange={(e) => set({ subject: e.target.value })}
@@ -1309,7 +1309,7 @@ function StepEditor({
               <option value="time_of_day">Hora del día</option>
             </select>
           </FieldBlock>
-          <FieldBlock label="Operand">
+          <FieldBlock label="Operando">
             <Input
               placeholder={
                 cfg.subject === "time_of_day"

@@ -81,7 +81,7 @@ export function ApiKeysSettings() {
       const res = await fetch('/api/account/api-keys', { cache: 'no-store' });
       if (!res.ok) {
         const payload = await res.json().catch(() => ({}));
-        toast.error(payload.error || 'Failed to load API keys');
+        toast.error(payload.error || 'Error al cargar claves API');
         return;
       }
       const data = (await res.json()) as { keys: ApiKey[] };
@@ -106,7 +106,7 @@ export function ApiKeysSettings() {
       });
       if (!res.ok) {
         const payload = await res.json().catch(() => ({}));
-        toast.error(payload.error || 'Failed to revoke key');
+        toast.error(payload.error || 'Error al revocar clave');
         return;
       }
       toast.success(`Revoked "${key.name}"`);
@@ -319,7 +319,7 @@ function CreateKeyDialog({
       });
       const payload = await res.json().catch(() => ({}));
       if (!res.ok) {
-        toast.error(payload.error || 'Failed to create key');
+        toast.error(payload.error || 'Error al crear clave');
         return;
       }
       setCreatedKey(payload.plaintext as string);
@@ -407,7 +407,7 @@ function CreateKeyDialog({
                   id="api-key-name"
                   value={name}
                   maxLength={80}
-                  placeholder="e.g. Zapier automation"
+                  placeholder="ej. Automatización Zapier"
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>

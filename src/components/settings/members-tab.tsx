@@ -149,7 +149,7 @@ export function MembersTab() {
 
       if (!mres.ok) {
         const payload = await mres.json().catch(() => ({}));
-        toast.error(payload.error || 'Failed to load members');
+        toast.error(payload.error || 'Error al cargar miembros');
         return;
       }
       const mdata = (await mres.json()) as { members: Member[] };
@@ -158,7 +158,7 @@ export function MembersTab() {
       if (ires) {
         if (!ires.ok) {
           const payload = await ires.json().catch(() => ({}));
-          toast.error(payload.error || 'Failed to load invitations');
+          toast.error(payload.error || 'Error al cargar invitaciones');
           return;
         }
         const idata = (await ires.json()) as { invitations: Invitation[] };
@@ -208,7 +208,7 @@ export function MembersTab() {
           ),
         );
         const payload = await res.json().catch(() => ({}));
-        toast.error(payload.error || 'Failed to update role');
+        toast.error(payload.error || 'Error al actualizar rol');
         return;
       }
       toast.success(`Updated ${member.full_name || 'member'} to ${nextRole}`);
@@ -236,7 +236,7 @@ export function MembersTab() {
       );
       if (!res.ok) {
         const payload = await res.json().catch(() => ({}));
-        toast.error(payload.error || 'Failed to remove member');
+        toast.error(payload.error || 'Error al eliminar miembro');
         return;
       }
       toast.success(`Removed ${removingMember.full_name || 'member'}`);
@@ -259,7 +259,7 @@ export function MembersTab() {
       });
       if (!res.ok) {
         const payload = await res.json().catch(() => ({}));
-        toast.error(payload.error || 'Failed to revoke invitation');
+        toast.error(payload.error || 'Error al revocar invitación');
         return;
       }
       toast.success('Invitation revoked');

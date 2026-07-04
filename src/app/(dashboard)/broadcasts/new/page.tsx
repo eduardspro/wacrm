@@ -91,11 +91,11 @@ export default function NewBroadcastPage() {
     } = await supabase.auth.getSession();
     const user = session?.user;
     if (!user) {
-      toast.error('Not signed in.');
+      toast.error('No has iniciado sesión.');
       return;
     }
     if (!accountId) {
-      toast.error('Your profile is not linked to an account.');
+      toast.error('Tu perfil no está vinculado a una cuenta.');
       return;
     }
 
@@ -120,7 +120,7 @@ export default function NewBroadcastPage() {
     });
 
     if (error) {
-      toast.error(`Failed to save draft: ${error.message}`);
+      toast.error(`Error al guardar borrador: ${error.message}`);
       return;
     }
     toast.success('Draft saved');

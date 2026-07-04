@@ -86,8 +86,8 @@ export function ConversationsChart({ series, loading, range, onRangeChange }: Co
       </div>
 
       <footer className="flex items-center gap-4 border-t border-border px-5 py-3 text-xs text-muted-foreground">
-        <LegendDot color="#3b82f6" label="Incoming" />
-        <LegendDot color="#7c3aed" label="Outgoing" />
+        <LegendDot color="#3b82f6" label="Entrantes" />
+        <LegendDot color="#7c3aed" label="Salientes" />
       </footer>
     </section>
   )

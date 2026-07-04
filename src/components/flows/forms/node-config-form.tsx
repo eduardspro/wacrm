@@ -79,7 +79,7 @@ export function NodeConfigForm({
       return (
         <>
           <TextRow
-            label="Text sent to the customer"
+            label="Texto enviado al cliente"
             value={(cfg as { text?: string }).text ?? ""}
             onChange={(v) => onUpdateConfig({ text: v })}
           />
@@ -129,7 +129,7 @@ export function NodeConfigForm({
       return (
         <>
           <TextRow
-            label="Prompt sent to the customer"
+            label="Mensaje enviado al cliente"
             value={(cfg as { prompt_text?: string }).prompt_text ?? ""}
             onChange={(v) => onUpdateConfig({ prompt_text: v })}
             rows={2}
@@ -145,7 +145,7 @@ export function NodeConfigForm({
                   var_key: e.target.value.replace(/[^a-zA-Z0-9_]/g, ""),
                 })
               }
-              placeholder="e.g. name, email, company"
+              placeholder="ej. nombre, correo, empresa"
               className="bg-muted font-mono text-xs"
             />
             <p className="mt-1 text-[10px] text-muted-foreground">
@@ -163,7 +163,7 @@ export function NodeConfigForm({
             allNodes={allNodes}
             currentKey={node.node_key}
             onChange={(v) => onUpdateConfig({ next_node_key: v })}
-            label="After capturing, advance to"
+            label="Después de capturar, avanzar a"
           />
         </>
       );
@@ -191,7 +191,7 @@ export function NodeConfigForm({
     case "handoff":
       return (
         <TextRow
-          label="Internal note (for the agent picking up)"
+          label="Nota interna (para el agente que retoma)"
           value={(cfg as { note?: string }).note ?? ""}
           onChange={(v) => onUpdateConfig({ note: v })}
           rows={2}
@@ -246,7 +246,7 @@ function SendButtonsForm({
         ...buttons,
         {
           reply_id: `btn_${buttons.length + 1}`,
-          title: "Option",
+          title: "Opción",
           next_node_key: "",
         },
       ],
@@ -299,7 +299,7 @@ function SendButtonsForm({
               <Input
                 value={b.title}
                 onChange={(e) => updateButton(i, { title: e.target.value })}
-                placeholder="Visible title (≤20 chars)"
+                placeholder="Título visible (≤20 caracteres)"
                 className="bg-muted"
                 maxLength={20}
               />
@@ -479,7 +479,7 @@ function SendListForm({
                 onChange={(e) =>
                   updateSection(sIdx, { title: e.target.value })
                 }
-                placeholder={`Section ${sIdx + 1} title (optional)`}
+                placeholder={`Título de sección ${sIdx + 1} (opcional)`}
                 className="bg-muted text-xs"
               />
               {sections.length > 1 && (
@@ -524,7 +524,7 @@ function SendListForm({
                   onChange={(e) =>
                     updateRow(sIdx, rIdx, { title: e.target.value })
                   }
-                  placeholder="Row title (≤24)"
+                  placeholder="Título de fila (≤24)"
                   className="bg-muted"
                   maxLength={24}
                 />
@@ -637,7 +637,7 @@ function ConditionForm({
               ? "var name"
               : subject === "tag"
                 ? "Etiqueta"
-                : "Field"}
+                : "Campo"}
           </label>
           {subject === "tag" && tags.length > 0 ? (
             <Select
@@ -661,7 +661,7 @@ function ConditionForm({
               onValueChange={(v) => onUpdateConfig({ subject_key: v })}
             >
               <SelectTrigger className="bg-muted">
-                <SelectValue placeholder="Pick a field…" />
+                <SelectValue placeholder="Elegir campo…" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="name">name</SelectItem>
@@ -676,7 +676,7 @@ function ConditionForm({
               onChange={(e) =>
                 onUpdateConfig({ subject_key: e.target.value })
               }
-              placeholder={subject === "var" ? "e.g. email" : "tag UUID"}
+              placeholder={subject === "var" ? "ej. correo" : "UUID de etiqueta"}
               className="bg-muted font-mono text-xs"
             />
           )}
@@ -805,7 +805,7 @@ function SetTagForm({
             <Input
               value={cfg.tag_id ?? ""}
               onChange={(e) => onUpdateConfig({ tag_id: e.target.value })}
-              placeholder="Tag UUID"
+              placeholder="UUID de etiqueta"
               className="bg-muted font-mono text-xs"
             />
           )}
@@ -1030,7 +1030,7 @@ function SendMediaForm({
           <Input
             value={cfg.filename ?? ""}
             onChange={(e) => onUpdateConfig({ filename: e.target.value })}
-            placeholder="invoice.pdf"
+            placeholder="factura.pdf"
             className="bg-muted text-xs"
           />
         </div>

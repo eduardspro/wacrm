@@ -27,7 +27,7 @@ export default function EditAutomationPage({
     async function load() {
       const res = await fetch(`/api/automations/${id}`)
       if (!res.ok) {
-        if (!cancelled) setError(`Failed to load (${res.status})`)
+        if (!cancelled) setError(`Error al cargar (${res.status})`)
         return
       }
       const body = await res.json()

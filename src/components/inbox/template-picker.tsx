@@ -194,8 +194,8 @@ export function TemplatePicker({
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
             {selected
-              ? "Fill in the placeholders to render this template. Meta requires every variable to be set."
-              : "Pick an approved WhatsApp template to send to this contact."}
+              ? "Completa los marcadores para esta plantilla. Meta requiere que todas las variables estén definidas."
+              : "Selecciona una plantilla de WhatsApp aprobada para enviar a este contacto."}
           </DialogDescription>
         </DialogHeader>
 
@@ -267,7 +267,7 @@ export function TemplatePicker({
                 <Input
                   value={headerText}
                   onChange={(e) => setHeaderText(e.target.value)}
-                  placeholder="Value for the header variable"
+                  placeholder="Valor para la variable del encabezado"
                   className="border-border bg-muted text-foreground placeholder:text-muted-foreground"
                 />
               </div>
@@ -282,7 +282,7 @@ export function TemplatePicker({
                     next[i] = e.target.value;
                     setParams(next);
                   }}
-                  placeholder={`Value for {{${v}}}`}
+                  placeholder={`Valor para {{${v}}}`}
                   className="border-border bg-muted text-foreground placeholder:text-muted-foreground"
                 />
               </div>
@@ -300,11 +300,11 @@ export function TemplatePicker({
                       [slot.index]: e.target.value,
                     }))
                   }
-                  placeholder="URL suffix value"
+                  placeholder="Valor del sufijo URL"
                   className="border-border bg-muted text-foreground placeholder:text-muted-foreground"
                 />
                 <p className="text-[10px] text-muted-foreground break-all">
-                  Final URL: {slot.url.replace(/\{\{1\}\}/g, buttonParams[slot.index] || "{{1}}")}
+                  URL final: {slot.url.replace(/\{\{1\}\}/g, buttonParams[slot.index] || "{{1}}")}
                 </p>
               </div>
             ))}

@@ -100,7 +100,7 @@ export default function FlowsPage() {
           fetch("/api/flows/templates"),
         ]);
         if (!flowsRes.ok) {
-          throw new Error(`Failed to load flows: ${flowsRes.status}`);
+          throw new Error(`Error al cargar flujos: ${flowsRes.status}`);
         }
         const flowsJson = (await flowsRes.json()) as { flows: FlowRow[] };
         if (!cancelled) setFlows(flowsJson.flows ?? []);
@@ -295,7 +295,7 @@ export default function FlowsPage() {
             <Input
               value={newName}
               onChange={(e) => setNewName(e.target.value)}
-              placeholder="e.g. Welcome menu"
+              placeholder="ej. Menú de bienvenida"
               className="bg-muted"
               onKeyDown={(e) => {
                 if (e.key === "Enter") handleCreate();

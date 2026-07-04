@@ -179,7 +179,7 @@ export default function BroadcastDetailPage() {
         if (recsError) throw recsError;
         setRecipients(recs ?? []);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to load broadcast');
+        setError(err instanceof Error ? err.message : 'Error al cargar la difusión');
       } finally {
         setLoading(false);
       }
@@ -236,7 +236,7 @@ export default function BroadcastDetailPage() {
       .eq('id', broadcastId);
     setDeleting(false);
     if (delErr) {
-      toast.error(`Failed to delete: ${delErr.message}`);
+      toast.error(`Error al eliminar: ${delErr.message}`);
       return;
     }
     toast.success('Broadcast deleted');

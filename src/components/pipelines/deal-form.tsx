@@ -151,7 +151,7 @@ export function DealForm({
 
   async function handleSave() {
     if (!title.trim() || !contactId || !stageId) {
-      toast.error("Title, contact, and stage are required");
+      toast.error("Título, contacto y etapa son obligatorios");
       return;
     }
     setSaving(true);
@@ -174,7 +174,7 @@ export function DealForm({
         .update(payload)
         .eq("id", deal.id);
       if (error) {
-        toast.error("Failed to save deal");
+        toast.error("Error al guardar el negocio");
         setSaving(false);
         return;
       }
@@ -184,12 +184,12 @@ export function DealForm({
       } = await supabase.auth.getSession();
       const user = session?.user;
       if (!user) {
-        toast.error("Not signed in");
+        toast.error("No has iniciado sesión");
         setSaving(false);
         return;
       }
       if (!accountId) {
-        toast.error("Your profile is not linked to an account.");
+        toast.error("Tu perfil no está vinculado a una cuenta.");
         setSaving(false);
         return;
       }
@@ -197,14 +197,14 @@ export function DealForm({
         .from("deals")
         .insert({ ...payload, user_id: user.id, account_id: accountId, status: "open" });
       if (error) {
-        toast.error("Failed to create deal");
+        toast.error("Error al crear el negocio");
         setSaving(false);
         return;
       }
     }
 
     setSaving(false);
-    toast.success(deal ? "Deal updated" : "Deal created");
+    toast.success(deal ? "Negocio actualizado" : "Negocio creado");
     onOpenChange(false);
     onSaved();
   }
@@ -218,11 +218,11 @@ export function DealForm({
       .eq("id", deal.id);
     setStatusAction(null);
     if (error) {
-      toast.error("Failed to update deal status");
+      toast.error("Error al actualizar el estado");
       return;
     }
     toast.success(
-      status === "won" ? "Marked as won" : status === "lost" ? "Marked as lost" : "Deal reopened",
+      status === "won" ? "Marcado como ganado" : status === "lost" ? "Marcado como perdido" : "Negocio reabierto",
     );
     onOpenChange(false);
     onSaved();
@@ -234,10 +234,10 @@ export function DealForm({
     const { error } = await supabase.from("deals").delete().eq("id", deal.id);
     setDeleting(false);
     if (error) {
-      toast.error("Failed to delete deal");
+      toast.error("Error al eliminar el negocio");
       return;
     }
-    toast.success("Deal deleted");
+    toast.success("Negocio eliminado");
     setConfirmDelete(false);
     onOpenChange(false);
     onSaved();
@@ -252,7 +252,7 @@ export function DealForm({
         <div className="flex h-full flex-col">
           <SheetHeader className="border-b border-border/50 p-4">
             <SheetTitle className="text-popover-foreground">
-              {deal ? "Edit Deal" : "Nuevo Negocio"}
+              {deal ? "Editar Negocio" : "Nuevo Negocio"}
             </SheetTitle>
           </SheetHeader>
 
@@ -262,7 +262,7 @@ export function DealForm({
               <Input
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Deal title"
+                placeholder="Título del negocio"
                 className="border-border bg-muted text-foreground"
               />
             </div>
@@ -288,7 +288,7 @@ export function DealForm({
                   className="mt-1 inline-flex items-center gap-1.5 self-start rounded-md bg-primary/10 px-2 py-1 text-xs text-primary hover:bg-primary/20"
                 >
                   <MessageSquare className="h-3 w-3" />
-                  Link to Conversation
+                  Ver conversación
                 </Link>
               )}
             </div>
@@ -369,7 +369,7 @@ export function DealForm({
               <Textarea
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                placeholder="Add notes..."
+                placeholder="Agregar notas..."
                 className="min-h-[100px] border-border bg-muted text-foreground"
               />
             </div>
@@ -390,7 +390,7 @@ export function DealForm({
                     ) : (
                       <>
                         <Check className="mr-1 h-4 w-4" />
-                        Mark as Won
+                        Marcar como Ganado
                       </>
                     )}
                   </Button>
@@ -405,7 +405,7 @@ export function DealForm({
                     ) : (
                       <>
                         <X className="mr-1 h-4 w-4" />
-                        Mark as Lost
+                        Marcar como Perdido
                       </>
                     )}
                   </Button>
@@ -418,7 +418,7 @@ export function DealForm({
                     disabled={!!statusAction}
                     className="w-full text-muted-foreground hover:text-foreground"
                   >
-                    Reopen deal
+                    Reabrir negocio
                   </Button>
                 )}
               </div>
@@ -460,7 +460,7 @@ export function DealForm({
                       disabled={deleting}
                       className="rounded bg-red-600 px-2 py-1 font-medium text-white hover:bg-red-700 disabled:opacity-50"
                     >
-                      {deleting ? "Deleting..." : "Confirmar"}
+                      {deleting ? "Eliminando..." : "Confirmar"}
                     </button>
                   </div>
                 </div>
@@ -471,7 +471,7 @@ export function DealForm({
                   className="mt-3 flex w-full items-center justify-center gap-1 text-xs text-red-400 hover:text-red-300"
                 >
                   <Trash2 className="h-3 w-3" />
-                  Delete Deal
+                  Eliminar Negocio
                 </button>
               ))}
           </div>

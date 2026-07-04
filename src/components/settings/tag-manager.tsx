@@ -77,7 +77,7 @@ export function TagManager() {
       setTags(data || []);
     } catch (err) {
       console.error('Failed to fetch tags:', err);
-      toast.error('Failed to load tags');
+      toast.error('Error al cargar etiquetas');
     } finally {
       setLoading(false);
     }
@@ -113,7 +113,7 @@ export function TagManager() {
       await fetchTags(user.id);
     } catch (err) {
       console.error('Create error:', err);
-      toast.error('Failed to create tag');
+      toast.error('Error al crear etiqueta');
     } finally {
       setSaving(false);
     }
@@ -142,7 +142,7 @@ export function TagManager() {
       setTagToDelete(null);
     } catch (err) {
       console.error('Delete error:', err);
-      toast.error('Failed to delete tag');
+      toast.error('Error al eliminar etiqueta');
     } finally {
       setDeleting(false);
     }
@@ -202,7 +202,7 @@ export function TagManager() {
             {/* Inline create row */}
             <div className="flex flex-wrap items-center gap-2.5">
               <Input
-                placeholder="e.g. Newsletter"
+                placeholder="ej. Boletín"
                 value={newTagName}
                 onChange={(e) => setNewTagName(e.target.value)}
                 onKeyDown={(e) => {
@@ -273,7 +273,7 @@ export function TagManager() {
               {deleting ? (
                 <>
                   <Loader2 className="size-4 animate-spin" />
-                  Deleting...
+                  Eliminando...
                 </>
               ) : (
                 'Delete tag'

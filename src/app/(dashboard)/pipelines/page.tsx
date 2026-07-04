@@ -77,7 +77,7 @@ export default function PipelinesPage() {
       .select("*")
       .order("created_at");
     if (error) {
-      console.error("Failed to load pipelines:", error.message);
+      console.error("Error al cargar pipelines:", error.message);
       return [];
     }
     return data ?? [];
@@ -223,7 +223,7 @@ export default function PipelinesPage() {
         .update({ stage_id: newStageId })
         .eq("id", dealId);
       if (error) {
-        toast.error("Failed to move deal");
+        toast.error("Error al mover negocio");
         refreshDeals();
       }
     },
@@ -260,7 +260,7 @@ export default function PipelinesPage() {
     }
     // pipelines.account_id is NOT NULL post-017 with no DB default.
     if (!accountId) {
-      toast.error("Your profile is not linked to an account.");
+      toast.error("Tu perfil no está vinculado a una cuenta.");
       setCreating(false);
       return;
     }
@@ -272,7 +272,7 @@ export default function PipelinesPage() {
       .single();
 
     if (error || !pipeline) {
-      toast.error("Failed to create pipeline");
+      toast.error("Error al crear pipeline");
       setCreating(false);
       return;
     }
@@ -290,7 +290,7 @@ export default function PipelinesPage() {
     setSelectedPipelineId(pipeline.id);
     await refreshPipelines();
     setCreating(false);
-    toast.success("Pipeline created");
+    toast.success("Pipeline creado");
   }
 
   const selectedPipeline = pipelines.find((p) => p.id === selectedPipelineId);
@@ -432,7 +432,7 @@ export default function PipelinesPage() {
             <Input
               value={newPipelineName}
               onChange={(e) => setNewPipelineName(e.target.value)}
-              placeholder="e.g., Enterprise Sales"
+              placeholder="ej. Ventas empresariales"
               className="mt-2 bg-muted border-border text-foreground"
               onKeyDown={(e) => {
                 if (e.key === "Enter") handleCreatePipeline();
