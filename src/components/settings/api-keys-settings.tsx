@@ -147,8 +147,7 @@ export function ApiKeysSettings() {
         action={
           <RequireRole min="admin">
             <Button onClick={() => setCreateOpen(true)}>
-              <Plus className="size-4" />
-              New API key
+              <Plus className="size-4" />Nueva clave API
             </Button>
           </RequireRole>
         }
@@ -163,7 +162,7 @@ export function ApiKeysSettings() {
             </p>
             {canEditSettings ? (
               <p className="text-muted-foreground mt-1 text-xs">
-                Click <span className="text-foreground">New API key</span> to
+                Click <span className="text-foreground">Nueva clave API</span> to
                 create one.
               </p>
             ) : (
@@ -392,8 +391,7 @@ function CreateKeyDialog({
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="text-popover-foreground">
-                New API key
+              <DialogTitle className="text-popover-foreground">Nueva clave API
               </DialogTitle>
               <DialogDescription className="text-muted-foreground">
                 Name it after the integration that will use it, and grant only
@@ -415,7 +413,7 @@ function CreateKeyDialog({
               </div>
 
               <div className="space-y-2">
-                <Label className="text-muted-foreground">Scopes</Label>
+                <Label className="text-muted-foreground">Permisos</Label>
                 <div className="border-border space-y-2 rounded-md border p-3">
                   {API_SCOPES.map((scope) => (
                     <label

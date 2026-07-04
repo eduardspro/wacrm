@@ -201,7 +201,7 @@ export function PipelineSettings({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md bg-popover border-border max-h-[85vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-popover-foreground">Manage Pipeline</DialogTitle>
+          <DialogTitle className="text-popover-foreground">Gestionar Pipeline</DialogTitle>
         </DialogHeader>
 
         {showDeleteConfirm ? (
@@ -238,7 +238,7 @@ export function PipelineSettings({
           <>
             <div className="grid gap-4 py-2">
               <div className="grid gap-2">
-                <Label className="text-muted-foreground">Pipeline Name</Label>
+                <Label className="text-muted-foreground">Nombre del Pipeline</Label>
                 <Input
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -247,7 +247,7 @@ export function PipelineSettings({
               </div>
 
               <div className="grid gap-2">
-                <Label className="text-muted-foreground">Stages</Label>
+                <Label className="text-muted-foreground">Etapas</Label>
                 <DndContext
                   sensors={sensors}
                   collisionDetection={closestCenter}

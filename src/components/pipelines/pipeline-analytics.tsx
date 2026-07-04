@@ -102,7 +102,7 @@ export function PipelineAnalytics({ stages, deals }: PipelineAnalyticsProps) {
         />
         <Metric
           icon={<DollarSign className="h-4 w-4 text-primary" />}
-          label="Pipeline Value"
+          label="Valor del Pipeline"
           value={formatCurrency(stats.totalValue, defaultCurrency)}
           tooltip="Sum of the dollar values of all deals in this pipeline, excluding deals marked as Lost."
         />

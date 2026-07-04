@@ -309,8 +309,7 @@ export function ContactForm({
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="cf-company" className="text-muted-foreground">
-              Company
+            <Label htmlFor="cf-company" className="text-muted-foreground">Empresa
             </Label>
             <Input
               id="cf-company"

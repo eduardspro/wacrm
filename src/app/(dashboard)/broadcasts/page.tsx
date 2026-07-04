@@ -190,15 +190,14 @@ export default function BroadcastsPage() {
           onClick={() => router.push('/broadcasts/new')}
           className="bg-primary text-primary-foreground hover:bg-primary/90"
         >
-          <Plus className="h-4 w-4" />
-          New Broadcast
+          <Plus className="h-4 w-4" />Nueva Difusión
         </GatedButton>
       </div>
 
       {broadcasts.length === 0 ? (
         <div className="flex h-64 flex-col items-center justify-center rounded-xl border border-border bg-card">
           <Radio className="mb-3 h-10 w-10 text-muted-foreground" />
-          <p className="text-sm font-medium text-foreground">No broadcasts yet</p>
+          <p className="text-sm font-medium text-foreground">No hay difusiones aún</p>
           <p className="mt-1 text-xs text-muted-foreground">
             Create your first broadcast to reach your contacts at scale.
           </p>
@@ -208,8 +207,7 @@ export default function BroadcastsPage() {
             onClick={() => router.push('/broadcasts/new')}
             className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90"
           >
-            <Plus className="h-4 w-4" />
-            New Broadcast
+            <Plus className="h-4 w-4" />Nueva Difusión
           </GatedButton>
         </div>
       ) : (
@@ -218,13 +216,13 @@ export default function BroadcastsPage() {
             <TableHeader>
               <TableRow className="border-border hover:bg-transparent">
                 <TableHead className="text-muted-foreground">Nombre</TableHead>
-                <TableHead className="hidden text-muted-foreground md:table-cell">Template</TableHead>
+                <TableHead className="hidden text-muted-foreground md:table-cell">Plantilla</TableHead>
                 <TableHead className="hidden text-right text-muted-foreground sm:table-cell">Destinatarios
                 </TableHead>
-                <TableHead className="hidden text-muted-foreground lg:table-cell">Delivery</TableHead>
+                <TableHead className="hidden text-muted-foreground lg:table-cell">Entrega</TableHead>
                 <TableHead className="hidden text-muted-foreground lg:table-cell">Leído</TableHead>
                 <TableHead className="text-muted-foreground">Estado</TableHead>
-                <TableHead className="hidden text-muted-foreground sm:table-cell">Date</TableHead>
+                <TableHead className="hidden text-muted-foreground sm:table-cell">Fecha</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

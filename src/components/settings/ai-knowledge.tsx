@@ -223,7 +223,7 @@ export function AiKnowledgeCard({
             {editing !== null ? (
               <div className="space-y-3 rounded-md border border-border p-3">
                 <div className="space-y-2">
-                  <Label htmlFor="kb-title">Title</Label>
+                  <Label htmlFor="kb-title">Título</Label>
                   <Input
                     id="kb-title"
                     value={title}
@@ -233,7 +233,7 @@ export function AiKnowledgeCard({
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="kb-content">Content</Label>
+                  <Label htmlFor="kb-content">Contenido</Label>
                   <Textarea
                     id="kb-content"
                     value={content}

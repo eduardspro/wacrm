@@ -118,7 +118,7 @@ export function ContactSidebar({ contact }: ContactSidebarProps) {
   if (!contact) {
     return (
       <div className="flex h-full w-70 items-center justify-center border-l border-border bg-card">
-        <p className="text-sm text-muted-foreground">Select a conversation</p>
+        <p className="text-sm text-muted-foreground">Selecciona una conversación</p>
       </div>
     );
   }
@@ -213,7 +213,7 @@ export function ContactSidebar({ contact }: ContactSidebarProps) {
             </div>
             <div className="mt-2 space-y-2">
               {deals.length === 0 ? (
-                <p className="px-1 text-xs text-muted-foreground">No deals</p>
+                <p className="px-1 text-xs text-muted-foreground">Sin negocios</p>
               ) : (
                 deals.map((deal) => (
                   <div

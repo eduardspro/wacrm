@@ -268,7 +268,7 @@ export function InviteMemberDialog({
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="text-popover-foreground">Invite a teammate</DialogTitle>
+              <DialogTitle className="text-popover-foreground">Invitar a un compañero</DialogTitle>
               <DialogDescription className="text-muted-foreground">
                 Generate a one-time invite link. Share it via WhatsApp,
                 Slack, or any channel you like — no email service required.
@@ -297,7 +297,7 @@ export function InviteMemberDialog({
               </div>
 
               <div className="space-y-2">
-                <Label className="text-muted-foreground">Link valid for</Label>
+                <Label className="text-muted-foreground">Enlace válido por</Label>
                 <Select
                   value={expiry}
                   onValueChange={(v) => v && setExpiry(v)}

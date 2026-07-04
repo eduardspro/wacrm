@@ -347,7 +347,7 @@ function EntryPicker({
   return (
     <section className="border-border bg-card flex items-center gap-3 rounded-lg border p-3">
       <CornerDownRight className="text-primary h-4 w-4 shrink-0" />
-      <span className="text-muted-foreground text-xs">Entry node:</span>
+      <span className="text-muted-foreground text-xs">Nodo de entrada:</span>
       <NodeKeySelect
         value={state.entry_node_id}
         nodes={state.nodes}

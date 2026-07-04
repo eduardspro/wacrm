@@ -310,7 +310,7 @@ export function ConversationList({
                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
-                <span className="truncate">{selectedCompany ?? "Company"}</span>
+                <span className="truncate">{selectedCompany ?? "Empresa"}</span>
                 <ChevronDown className="h-3 w-3 shrink-0" />
               </DropdownMenuTrigger>
               <DropdownMenuContent
@@ -361,7 +361,7 @@ export function ConversationList({
                     className="h-1.5 w-1.5 shrink-0 rounded-full"
                     style={{ backgroundColor: tag?.color ?? "var(--muted-foreground)" }}
                   />
-                  <span className="max-w-24 truncate">{tag?.name ?? "Tag"}</span>
+                  <span className="max-w-24 truncate">{tag?.name ?? "Etiqueta"}</span>
                   <X className="h-3 w-3" />
                 </button>
               );
@@ -398,7 +398,7 @@ export function ConversationList({
           </div>
         ) : filtered.length === 0 ? (
           <div className="px-4 py-12 text-center">
-            <p className="text-sm text-muted-foreground">No conversations found</p>
+            <p className="text-sm text-muted-foreground">No se encontraron conversaciones</p>
           </div>
         ) : (
           <div className="flex flex-col">

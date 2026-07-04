@@ -508,7 +508,7 @@ export function TemplateManager() {
       {templates.length === 0 ? (
         <Card>
           <CardContent className="flex flex-col items-center justify-center py-12 text-center">
-            <p className="text-muted-foreground text-sm">No templates yet.</p>
+            <p className="text-muted-foreground text-sm">No hay plantillas aún.</p>
             <p className="text-muted-foreground text-xs mt-1">
               Create your first message template to get started.
             </p>
@@ -663,7 +663,7 @@ export function TemplateManager() {
 
           <div className="space-y-4 py-2">
             <div className="space-y-2">
-              <Label className="text-muted-foreground">Template Name</Label>
+              <Label className="text-muted-foreground">Nombre de la Plantilla</Label>
               <Input
                 placeholder="e.g. order_confirmation"
                 value={form.name}
@@ -680,7 +680,7 @@ export function TemplateManager() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label className="text-muted-foreground">Category</Label>
+                <Label className="text-muted-foreground">Categoría</Label>
                 <Select
                   value={form.category}
                   onValueChange={(val) =>
@@ -738,7 +738,7 @@ export function TemplateManager() {
             </div>
 
             <div className="space-y-2">
-              <Label className="text-muted-foreground">Header</Label>
+              <Label className="text-muted-foreground">Encabezado</Label>
               <Select
                 value={form.header_format}
                 onValueChange={(val) =>
@@ -864,7 +864,7 @@ export function TemplateManager() {
             </div>
 
             <div className="space-y-2">
-              <Label className="text-muted-foreground">Body Text</Label>
+              <Label className="text-muted-foreground">Texto del Cuerpo</Label>
               <Textarea
                 placeholder="Hello {{1}}, your order {{2}} is confirmed."
                 value={form.body_text}
@@ -1093,7 +1093,7 @@ export function TemplateManager() {
       >
         <DialogContent className="bg-popover border-border sm:max-w-sm">
           <DialogHeader>
-            <DialogTitle className="text-popover-foreground">Delete template?</DialogTitle>
+            <DialogTitle className="text-popover-foreground">¿Eliminar plantilla?</DialogTitle>
             <DialogDescription className="text-muted-foreground">
               {templateToDelete?.meta_template_id
                 ? `"${templateToDelete?.name}" will be deleted from Meta and from wacrm. Active broadcasts using this template will start failing on their next send. This can't be undone.`

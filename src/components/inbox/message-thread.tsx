@@ -787,8 +787,7 @@ export function MessageThread({
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-muted">
           <MessageSquare className="h-8 w-8 text-muted-foreground" />
         </div>
-        <h3 className="mt-4 text-sm font-medium text-muted-foreground">
-          Select a conversation
+        <h3 className="mt-4 text-sm font-medium text-muted-foreground">Selecciona una conversación
         </h3>
         <p className="mt-1 text-xs text-muted-foreground">
           Choose a conversation from the left to start messaging

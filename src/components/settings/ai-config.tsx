@@ -268,7 +268,7 @@ export function AiConfig() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="ai-model">Model</Label>
+                <Label htmlFor="ai-model">Modelo</Label>
                 <Input
                   id="ai-model"
                   value={model}
@@ -367,7 +367,7 @@ export function AiConfig() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Behaviour</CardTitle>
+            <CardTitle className="text-base">Comportamiento</CardTitle>
             <CardDescription>
               Tell the assistant about your business — products, tone, what it
               may and may not promise. This context feeds both drafts and
@@ -376,7 +376,7 @@ export function AiConfig() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="ai-prompt">Business context & instructions</Label>
+              <Label htmlFor="ai-prompt">Contexto e instrucciones del negocio</Label>
               <Textarea
                 id="ai-prompt"
                 value={systemPrompt}
@@ -424,7 +424,7 @@ export function AiConfig() {
 
             <div className="flex items-center justify-between gap-4">
               <div>
-                <Label htmlFor="ai-max">Max auto-replies per conversation</Label>
+                <Label htmlFor="ai-max">Máx. respuestas automáticas por conversación</Label>
                 <p className="text-xs text-muted-foreground">
                   After this many bot replies in one thread, the bot goes quiet.
                 </p>

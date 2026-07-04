@@ -515,8 +515,7 @@ export function ImportModal({
                         <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">Correo electrónico
                         </th>
                         {previewHasCompany && (
-                          <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">
-                            Company
+                          <th className="px-3 py-2 text-left font-medium whitespace-nowrap text-muted-foreground">Empresa
                           </th>
                         )}
                         {previewHasTags && (
@@ -584,7 +583,7 @@ export function ImportModal({
 
           {result && (
             <div className="rounded-xl border border-border bg-background/50 p-4">
-              <p className="text-sm font-medium text-popover-foreground">Import complete</p>
+              <p className="text-sm font-medium text-popover-foreground">Importación completada</p>
               <div className="mt-3 flex flex-wrap gap-3">
                 {result.imported > 0 && (
                   <div className="text-primary flex items-center gap-1.5 text-sm">

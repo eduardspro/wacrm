@@ -194,8 +194,7 @@ function MessageContent({ message }: { message: Message }) {
       return (
         <div>
           <span className="mb-1 inline-flex items-center gap-1 rounded bg-primary/20 px-1.5 py-0.5 text-[10px] font-medium text-primary">
-            <LayoutTemplate className="h-3 w-3" />
-            Template
+            <LayoutTemplate className="h-3 w-3" />Plantilla
           </span>
           {message.content_text && (
             <p className="mt-1 whitespace-pre-wrap break-words text-sm">

@@ -614,7 +614,7 @@ function ConditionForm({
     <>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
         <div>
-          <label className="mb-1 block text-xs text-muted-foreground">If</label>
+          <label className="mb-1 block text-xs text-muted-foreground">Si</label>
           <Select
             value={subject}
             onValueChange={(v) =>
@@ -625,9 +625,9 @@ function ConditionForm({
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="var">Captured variable</SelectItem>
-              <SelectItem value="tag">Contact has tag</SelectItem>
-              <SelectItem value="contact_field">Contact field</SelectItem>
+              <SelectItem value="var">Variable capturada</SelectItem>
+              <SelectItem value="tag">Contacto tiene etiqueta</SelectItem>
+              <SelectItem value="contact_field">Campo de contacto</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -636,7 +636,7 @@ function ConditionForm({
             {subject === "var"
               ? "var name"
               : subject === "tag"
-                ? "Tag"
+                ? "Etiqueta"
                 : "Field"}
           </label>
           {subject === "tag" && tags.length > 0 ? (
@@ -690,7 +690,7 @@ function ConditionForm({
         )}
       >
         <div>
-          <label className="mb-1 block text-xs text-muted-foreground">Operator</label>
+          <label className="mb-1 block text-xs text-muted-foreground">Operador</label>
           <Select
             value={operator}
             onValueChange={(v) =>
@@ -779,12 +779,12 @@ function SetTagForm({
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="add">Agregar etiqueta</SelectItem>
-              <SelectItem value="remove">Remove tag</SelectItem>
+              <SelectItem value="remove">Quitar etiqueta</SelectItem>
             </SelectContent>
           </Select>
         </div>
         <div>
-          <label className="mb-1 block text-xs text-muted-foreground">Tag</label>
+          <label className="mb-1 block text-xs text-muted-foreground">Etiqueta</label>
           {tags.length > 0 ? (
             <Select
               value={cfg.tag_id ?? ""}
@@ -930,7 +930,7 @@ function SendMediaForm({
   return (
     <>
       <div>
-        <label className="mb-1 block text-xs text-muted-foreground">Media type</label>
+        <label className="mb-1 block text-xs text-muted-foreground">Tipo de medio</label>
         <Select
           value={mediaType}
           onValueChange={(v) => {
@@ -958,7 +958,7 @@ function SendMediaForm({
       </div>
 
       <div>
-        <label className="mb-1 block text-xs text-muted-foreground">File</label>
+        <label className="mb-1 block text-xs text-muted-foreground">Archivo</label>
         {cfg.media_url ? (
           <div className="flex items-center gap-2 rounded-md border border-border bg-muted px-3 py-2 text-xs">
             <Paperclip className="h-3.5 w-3.5 shrink-0 text-cyan-400" />

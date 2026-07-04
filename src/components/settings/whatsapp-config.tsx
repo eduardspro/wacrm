@@ -567,7 +567,7 @@ export function WhatsAppConfig() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label className="text-muted-foreground">Phone Number ID</Label>
+              <Label className="text-muted-foreground">ID del Número de Teléfono</Label>
               <Input
                 placeholder="e.g. 100234567890123"
                 value={phoneNumberId}
@@ -577,7 +577,7 @@ export function WhatsAppConfig() {
             </div>
 
             <div className="space-y-2">
-              <Label className="text-muted-foreground">WhatsApp Business Account ID</Label>
+              <Label className="text-muted-foreground">ID de Cuenta de WhatsApp Business</Label>
               <Input
                 placeholder="e.g. 100234567890456"
                 value={wabaId}
@@ -587,7 +587,7 @@ export function WhatsAppConfig() {
             </div>
 
             <div className="space-y-2">
-              <Label className="text-muted-foreground">Permanent Access Token</Label>
+              <Label className="text-muted-foreground">Token de Acceso Permanente</Label>
               <div className="relative">
                 <Input
                   type={showToken ? 'text' : 'password'}
@@ -621,7 +621,7 @@ export function WhatsAppConfig() {
             </div>
 
             <div className="space-y-2">
-              <Label className="text-muted-foreground">Webhook Verify Token</Label>
+              <Label className="text-muted-foreground">Token de Verificación Webhook</Label>
               <Input
                 placeholder="Create a custom verify token"
                 value={verifyToken}
@@ -660,7 +660,7 @@ export function WhatsAppConfig() {
                 otherwise Meta routes inbound events to whichever app
                 last claimed it (the symptom that hits second numbers
                 under a shared WABA).{' '}
-                <strong className="text-muted-foreground">Meta test numbers</strong> have no
+                <strong className="text-muted-foreground">Números de prueba de Meta</strong> have no
                 PIN and are pre-registered — leave this blank for them.
                 Leaving it blank also keeps an existing registration
                 untouched.
@@ -672,14 +672,14 @@ export function WhatsAppConfig() {
         {/* Webhook URL */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-foreground">Webhook Configuration</CardTitle>
+            <CardTitle className="text-foreground">Configuración Webhook</CardTitle>
             <CardDescription className="text-muted-foreground">
               Use this URL as your webhook callback in the Meta App Dashboard.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-2">
-              <Label className="text-muted-foreground">Webhook Callback URL</Label>
+              <Label className="text-muted-foreground">URL de Callback Webhook</Label>
               <div className="flex gap-2">
                 <Input
                   readOnly
@@ -759,7 +759,7 @@ export function WhatsAppConfig() {
       <div>
         <Card>
           <CardHeader>
-            <CardTitle className="text-foreground text-base">Setup Instructions</CardTitle>
+            <CardTitle className="text-foreground text-base">Instrucciones de Configuración</CardTitle>
             <CardDescription className="text-muted-foreground">
               Follow these steps to connect your WhatsApp Business API.
             </CardDescription>
@@ -809,9 +809,9 @@ export function WhatsAppConfig() {
                 <AccordionContent className="text-muted-foreground">
                   <ol className="list-decimal list-inside space-y-1 text-sm">
                     <li>Go to WhatsApp &gt; API Setup</li>
-                    <li>Copy your <strong className="text-foreground">Phone Number ID</strong></li>
-                    <li>Copy your <strong className="text-foreground">WhatsApp Business Account ID</strong></li>
-                    <li>Generate a <strong className="text-foreground">Permanent Access Token</strong> from Business Settings &gt; System Users</li>
+                    <li>Copia tu <strong className="text-foreground">ID del Número de Teléfono</strong></li>
+                    <li>Copia tu <strong className="text-foreground">ID de Cuenta de WhatsApp Business</strong></li>
+                    <li>Genera un <strong className="text-foreground">Token de Acceso Permanente</strong> from Business Settings &gt; System Users</li>
                   </ol>
                 </AccordionContent>
               </AccordionItem>
@@ -827,8 +827,8 @@ export function WhatsAppConfig() {
                   <ol className="list-decimal list-inside space-y-1 text-sm">
                     <li>Go to WhatsApp &gt; Configuration</li>
                     <li>Click &quot;Edit&quot; on the Webhook section</li>
-                    <li>Paste the <strong className="text-foreground">Webhook Callback URL</strong> from above</li>
-                    <li>Enter the same <strong className="text-foreground">Verify Token</strong> you set here</li>
+                    <li>Pega el <strong className="text-foreground">URL de Callback Webhook</strong> from above</li>
+                    <li>Ingresa el mismo <strong className="text-foreground">Verify Token</strong> you set here</li>
                     <li>Subscribe to &quot;messages&quot; webhook field</li>
                   </ol>
                 </AccordionContent>

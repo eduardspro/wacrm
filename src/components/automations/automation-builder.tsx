@@ -353,7 +353,7 @@ function ContactFieldSelect({
     >
       <option value="name">Nombre</option>
       <option value="email">Correo electrónico</option>
-      <option value="company">Company</option>
+      <option value="company">Empresa</option>
       {customFields.length > 0 && (
         <optgroup label="Campos personalizados">
           {customFields.map((f) => (
@@ -480,7 +480,7 @@ function DealPipelineFields({
           )}
         </select>
       </FieldBlock>
-      <FieldBlock label="Stage">
+      <FieldBlock label="Etapa">
         <select
           value={stageId}
           onChange={(e) =>
@@ -554,7 +554,7 @@ function SendTemplateFields({
   )
 
   return (
-    <FieldBlock label="Template">
+    <FieldBlock label="Plantilla">
       <select
         value={current}
         onChange={(e) => {
@@ -805,8 +805,7 @@ function TriggerCard({
             )}
             {type === "tag_added" && (
               <div>
-                <label className="mb-1 block text-xs font-medium text-muted-foreground">
-                  Tag
+                <label className="mb-1 block text-xs font-medium text-muted-foreground">Etiqueta
                 </label>
                 <TagSelect
                   value={(config.tag_id as string) ?? ""}
@@ -897,8 +896,8 @@ function KeywordMatchConfig({
           onChange={(e) => onChange({ ...config, match_type: e.target.value as "exact" | "contains" })}
           className="w-full rounded-md border border-border bg-muted px-2 py-1.5 text-sm text-foreground focus:outline-none"
         >
-          <option value="contains">Contains</option>
-          <option value="exact">Exact</option>
+          <option value="contains">Contiene</option>
+          <option value="exact">Exacto</option>
         </select>
       </div>
     </div>
@@ -1196,7 +1195,7 @@ function StepEditor({
     case "add_tag":
     case "remove_tag":
       return (
-        <FieldBlock label="Tag">
+        <FieldBlock label="Etiqueta">
           <TagSelect
             value={(cfg.tag_id as string) ?? ""}
             onChange={(v) => set({ tag_id: v })}
@@ -1212,8 +1211,8 @@ function StepEditor({
               onChange={(e) => set({ mode: e.target.value })}
               className="w-full rounded-md border border-border bg-muted px-2 py-1.5 text-sm text-foreground"
             >
-              <option value="round_robin">Round-robin</option>
-              <option value="specific">Specific agent</option>
+              <option value="round_robin">Rotativo</option>
+              <option value="specific">Agente específico</option>
             </select>
           </FieldBlock>
           {cfg.mode === "specific" && (
@@ -1253,7 +1252,7 @@ function StepEditor({
             stageId={(cfg.stage_id as string) ?? ""}
             onChange={(patch) => set(patch)}
           />
-          <FieldBlock label="Title">
+          <FieldBlock label="Título">
             <Input
               value={(cfg.title as string) ?? ""}
               onChange={(e) => set({ title: e.target.value })}
@@ -1288,9 +1287,9 @@ function StepEditor({
               onChange={(e) => set({ unit: e.target.value })}
               className="w-full rounded-md border border-border bg-muted px-2 py-1.5 text-sm text-foreground"
             >
-              <option value="minutes">Minutes</option>
-              <option value="hours">Hours</option>
-              <option value="días">Days</option>
+              <option value="minutes">Minutos</option>
+              <option value="hours">Horas</option>
+              <option value="días">Días</option>
             </select>
           </FieldBlock>
         </div>
@@ -1304,10 +1303,10 @@ function StepEditor({
               onChange={(e) => set({ subject: e.target.value })}
               className="w-full rounded-md border border-border bg-muted px-2 py-1.5 text-sm text-foreground"
             >
-              <option value="tag_presence">Tag presence</option>
-              <option value="contact_field">Contact field</option>
-              <option value="message_content">Message content</option>
-              <option value="time_of_day">Time of day</option>
+              <option value="tag_presence">Presencia de etiqueta</option>
+              <option value="contact_field">Campo de contacto</option>
+              <option value="message_content">Contenido del mensaje</option>
+              <option value="time_of_day">Hora del día</option>
             </select>
           </FieldBlock>
           <FieldBlock label="Operand">
